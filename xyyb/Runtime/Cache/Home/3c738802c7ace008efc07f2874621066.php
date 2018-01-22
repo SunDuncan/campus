@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>END_MIN_DATE

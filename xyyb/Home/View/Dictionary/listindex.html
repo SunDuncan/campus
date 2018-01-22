@@ -2,11 +2,11 @@
 <title>字典管理</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 字典管理 <span class="c-gray en">&gt;</span> 字典添加 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 字典管理 <span class="c-gray en">&gt;</span> 字典查询 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <table class="table">
     <tr>
-        <td width="200" class="va-t"><ul id="treeDemo" class="ztree"></ul></td>
-        <td class="va-t"><iframe ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=390px SRC="adddictionary.html"></iframe></td>
+        <td width="200" class="va-t"><ul id="treeDemoList" class="ztree"></ul></td>
+        <td class="va-t"><iframe ID="testIframeList" Name="testIframeList" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=390px SRC="showlist.html"></iframe></td>
     </tr>
 </table>
 
@@ -60,9 +60,9 @@
     }
 
     $(document).ready(function(){
-        var t = $("#treeDemo");
+        var t = $("#treeDemoList");
         t = $.fn.zTree.init(t, setting, zNodes);
-        demoIframe = $("#testIframe");
+        demoIframe = $("#testIframeList");
         //demoIframe.on("load", loadReady);
         var zTree = $.fn.zTree.getZTreeObj("tree");
         //zTree.selectNode(zTree.getNodeByParam("id",'11'));

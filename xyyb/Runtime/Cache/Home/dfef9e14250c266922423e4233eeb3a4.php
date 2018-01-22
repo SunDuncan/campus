@@ -51,7 +51,7 @@
                 <ul class="cl">
                     <li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
-                            <li><a href="javascript:;" onclick="article_add('添加字典','<?php echo U('Dictionary/index');?>', '', '510')"><i class="Hui-iconfont">&#xe616;</i> 字典</a></li>
+                            <li><a href="javascript:;" onclick="dictionary_add('添加字典','<?php echo U('Dictionary/index');?>', '', '510')"><i class="Hui-iconfont">&#xe616;</i> 字典</a></li>
                             <li><a href="javascript:;" onclick="member_add('添加用户','<?php echo U('User/AddUser');?>','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
                         </ul>
                     </li>
@@ -90,7 +90,7 @@
             <dt><i class="Hui-iconfont">&#xe60c;</i> 任务管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="<?php echo U('welcome');?>" data-title="任务查询" href="javascript:void(0)">任务查询</a></li>
+                    <li><a data-href="<?php echo U('Task/showList');?>" data-title="任务列表" href="javascript:void(0)">任务列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -98,7 +98,7 @@
             <dt><i class="Hui-iconfont">&#xe622;</i> 消息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="picture-list.html" data-title="消息查询" href="javascript:void(0)">消息查询</a></li>
+                    <li><a data-href="<?php echo U('Message/showList');?>" data-title="消息列表" href="javascript:void(0)">消息列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -106,7 +106,7 @@
             <dt><i class="Hui-iconfont">&#xe720;</i> 字典管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="product-brand.html" data-title="字典查询" href="javascript:void(0)">字典查询</a></li>
+                    <li><a data-href="<?php echo U('Dictionary/listIndex');?>" data-title="字典查询" href="javascript:void(0)">字典查询</a></li>
                 </ul>
             </dd>
         </dl>
@@ -114,7 +114,7 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="http://h-ui.duoshuo.com/admin/" data-title="用户查询" href="javascript:;">用户查询</a></li>
+                    <li><a data-href="<?php echo U('User/showList');?>" data-title="用户列表" href="javascript:;">用户列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -206,6 +206,11 @@
     }
     /*用户-添加*/
     function member_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+
+    /*字典-添加*/
+    function dictionary_add(title,url,w,h){
         layer_show(title,url,w,h);
     }
 </script>

@@ -7,11 +7,15 @@
  */
 namespace Home\Controller;
 class UserController extends BackendController {
-    public function  AddUser() {
+    public function  addUser() {
         $this->display();
     }
 
-    public function PostUser() {
+    public function postUser() {
 
+    }
+
+    public function showList() {
+        $this->display();
     }
 }
