@@ -31,7 +31,7 @@
     <![endif]-->
     <meta name="keywords" content="校园佣兵">
     <meta name="description" content="校园佣兵">
-<title>产品分类</title>
+<title>字典管理</title>
 </head>
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 字典管理 <span class="c-gray en">&gt;</span> 字典添加 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
@@ -69,10 +69,15 @@
             beforeClick: function(treeId, treeNode) {
                 var zTree = $.fn.zTree.getZTreeObj("tree");
                 if (treeNode.isParent) {
+                    var test = '<?php echo U("adddictionary");?>';
+                    test = test.replace(/\.html/, '') + "/id/" + treeNode.id + "/pid/" + treeNode.pId + "/name/" + treeNode.name + "/level/" + treeNode.level;
+                    demoIframe.attr("src",test);
                     zTree.expandNode(treeNode);
                     return false;
                 } else {
-                    demoIframe.attr("src",treeNode.file + ".html");
+                    var test = '<?php echo U("adddictionary");?>';
+                    test = test.replace(/\.html/, '') + "/id/" + treeNode.id + "/pid/" + treeNode.pId + "/name/" + treeNode.name + "/level/" + treeNode.level;
+                    demoIframe.attr("src",test);
                     return true;
                 }
             }
@@ -80,7 +85,7 @@
     };
 
     var zNodes =[
-        { id:1, pId:0, name:"校园", open:true},
+        { id:1, pId:0, name:"校园佣兵", open:true},
         { id:11, pId:1, name:"学习"},
         { id:111, pId:11, name:"代课"},
         { id:112, pId:11, name:"补习"},

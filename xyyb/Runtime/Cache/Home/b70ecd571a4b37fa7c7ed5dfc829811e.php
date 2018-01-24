@@ -35,13 +35,15 @@
 </head>
 <body>
 <div class="page-container">
-    <form action="" method="post" class="form form-horizontal" id="form-user-add">
+    <form action="<?php echo U('dictionary/post');?>" method="post" class="form form-horizontal" id="form-user-add">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">
                 <span class="c-red">*</span>
-                分类名称：</label>
+                父级分类名称：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" value="" placeholder="" id="user-name" name="product-category-name">
+                <input type="text" class="input-text" value="<?php echo ($name); ?>" placeholder="" id=d_name" name="d_name">
+                <input type="hidden" name="p_id" value="<?php echo ($id); ?>">
+                <input type="hidden" name="d_level" value="<?php echo ($level); ?>">
             </div>
         </div>
         <div class="row cl">
@@ -49,7 +51,7 @@
                 <span class="c-red">*</span>
                 字典代码：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" value="" placeholder="" id="user-name" name="product-category-name">
+                <input type="text" class="input-text" value="" placeholder="" id="d_code" name="d_code">
             </div>
         </div>
         <div class="row cl">
@@ -57,7 +59,7 @@
                 <span class="c-red">*</span>
                 字典值：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" value="" placeholder="" id="user-name" name="product-category-name">
+                <input type="text" class="input-text" value="" placeholder="" id="d_value" name="d_value">
             </div>
         </div>
         <div class="row cl">
