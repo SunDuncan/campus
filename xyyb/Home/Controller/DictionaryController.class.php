@@ -8,13 +8,16 @@
  */
 namespace Home\Controller;
 use Home\Model\DictionaryModel;
+use Home\Service\DictionaryService;
 class DictionaryController extends BackendController {
 
+    protected $dictionaryService;
     protected $dictionaryModel;
     public function __construct()
     {
         parent::__construct();
         $this->dictionaryModel = new DictionaryModel();
+        $this->dictionaryService = new DictionaryService();
     }
 
     public function addDictionary() {
@@ -37,6 +40,8 @@ class DictionaryController extends BackendController {
     public function showList() {
         $end_min_date = '#F{$dp.$D(' . '\\' . '\'logmin' . '\\' . '\'' . ')}';
         $start_max_date = '#F{$dp.$D(' . '\\' . '\'logmax' . '\\' . '\')||' . '\\' . '\'%y-%M-%d' . '\\' . '\'}';
+        $list_data = $this->getDictionaries();
+        $this->assign('list', $list_data);
         $this->assign('START_MAX_DATE', $start_max_date);
         $this->assign('END_MIN_DATE', $end_min_date);
         $this->display();
@@ -68,6 +73,6 @@ class DictionaryController extends BackendController {
     
     public function getDictionaries() {
         $data = $this->dictionaryModel->getDictionaries();
-        var_dump($data);
+        return $this->dictionaryService->formatDictionary($data);
     }
 }

@@ -60,17 +60,17 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="text-c">
+            <?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="text-c">
                 <td><input name="" type="checkbox" value=""></td>
-                <td>001</td>
-                <td>校园</td>
-                <td class="text-c">SCHOOL</td>
-                <td class="text-c">校园</td>
-                <td>1</td>
-                <td>2014-6-11 11:11:42</td>
+                <td><?php echo ($vo['id']); ?></td>
+                <td><?php echo ($vo['category']); ?></td>
+                <td class="text-c"><?php echo ($vo['code']); ?></td>
+                <td class="text-c"><?php echo ($vo['value']); ?></td>
+                <td><?php echo ($vo['level']); ?></td>
+                <td><?php echo ($vo['createtime']); ?></td>
                 <td class="td-status"><span class="label label-success radius">已发布</span></td>
                 <td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('字典编辑','','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-            </tr>
+            </tr><?php endforeach; endif; ?>
             </tbody>
         </table>
     </div>
