@@ -43,7 +43,7 @@
         <input type="text" name="" id="" placeholder=" 字典值" style="width:120px" class="input-text">
         <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
     </div>
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="dictionary_add('添加字典','<?php echo U('Dictionary/index');?>', '', '330')", href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加字典</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="delAll()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="dictionary_add('添加字典','<?php echo U('Dictionary/index');?>', '', '330')", href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加字典</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort">
             <thead>
@@ -203,15 +203,26 @@
      */
 
     function getCheckBoxValues() {
-        console.log("this is a test");
-        $("input[name='array_ids'][checked]").each(function () {
-            console.log(this.value + "  ");
+        var id_array = new Array();
+        $('input[name="array_ids"]:checked').each(function () {
+            id_array.push($(this).val());
         })
+
+        var id_string = id_array.join(',');
+        delAjax(id_string);
     }
 
     /*字典--批量删除*/
-    function datadel() {
+    function delAll() {
         getCheckBoxValues();
+    }
+
+    /**
+     * 调用删除的ajax接口请求
+     */
+    function delAjax(ids) {
+        console.log("要删除的ids是")
+        console.log(ids);
     }
 </script>
 </body>
