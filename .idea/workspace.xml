@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/7f0519de4d6fabe2f777b6c72d8056db.php" afterPath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/7f0519de4d6fabe2f777b6c72d8056db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/b70ecd571a4b37fa7c7ed5dfc829811e.php" afterPath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/b70ecd571a4b37fa7c7ed5dfc829811e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/c93ab6aca25714b0b01a2a87f02a091a.php" afterPath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/c93ab6aca25714b0b01a2a87f02a091a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_30.log" afterPath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_30.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -404,15 +398,15 @@
       <workItem from="1516849484274" duration="3711000" />
       <workItem from="1517305359360" duration="5041000" />
       <workItem from="1517315244291" duration="251000" />
-      <workItem from="1517316912180" duration="1084000" />
+      <workItem from="1517316912180" duration="1362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54454000" />
+    <option name="totallyTimeSpent" value="54732000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33358547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
