@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/19f1624737a803060daadf6b40642094.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/3c738802c7ace008efc07f2874621066.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/5fe0ffe780153bf4ca047f5a6abbfdaa.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/636b44db202972448346c03ae111d74f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/65975ae97d7c22adc8880a10dbfd75d6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/7f0519de4d6fabe2f777b6c72d8056db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/96883822d491c92f5e82712df767fa20.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/98e6721b9412b5fac99ee50aa1ed2a45.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/b70ecd571a4b37fa7c7ed5dfc829811e.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/ba6fa5d5d698f9d721bdc23473093a58.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/c0696433dd8ca19762ab5f7bec5dfdbc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/c93ab6aca25714b0b01a2a87f02a091a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/de7bf3ee90af6b395cb64cd9a07d3509.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/dfef9e14250c266922423e4233eeb3a4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_19.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_20.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_21.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_22.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_23.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_24.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_25.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/Runtime/Logs/Home/18_01_30.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +47,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+            <state relative-caret-position="23">
+              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -420,15 +399,16 @@
       <workItem from="1516849484274" duration="3711000" />
       <workItem from="1517305359360" duration="5041000" />
       <workItem from="1517315244291" duration="251000" />
-      <workItem from="1517316912180" duration="1542000" />
+      <workItem from="1517316912180" duration="1799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54912000" />
+    <option name="totallyTimeSpent" value="55169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33358547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -437,7 +417,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.652459" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12131148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -777,8 +757,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        <state relative-caret-position="23">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           <folding />
         </state>
       </provider>
