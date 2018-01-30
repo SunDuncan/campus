@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_CSS_URL); ?>H-ui.admin.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_LIB); ?>Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_SKIN_URL); ?>default/skin.css" id="skin" />
-    <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_CSS_URL); ?>css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_CSS_URL); ?>style.css" />
     <link rel="stylesheet" href="<?php echo (HUI_ADMIN_LIB); ?>zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <!--[if IE 6]>
     <script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -35,10 +35,10 @@
 </head>
 <body>
 <div class="page-container">
-    <div class="text-c"> 日期范围：
-        <input type="text" onfocus="WdatePicker({ maxDate: '<?php echo ($START_MAX_DATE); ?>' })" id="logmin" class="input-text Wdate" style="width:120px;">
-         -
-        <input type="text" onfocus="WdatePicker({ minDate:'<?php echo ($END_MIN_DATE); ?>',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
+    <div class="text-c">
+        <!--<input type="text" onfocus="WdatePicker({ maxDate: '<?php echo ($START_MAX_DATE); ?>' })" id="logmin" class="input-text Wdate" style="width:120px;">-->
+         <!-- - -->
+        <!--<input type="text" onfocus="WdatePicker({ minDate:'<?php echo ($END_MIN_DATE); ?>',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">-->
         <input type="text" name="" id="" placeholder=" 字典代码" style="width:120px" class="input-text">
         <input type="text" name="" id="" placeholder=" 字典值" style="width:120px" class="input-text">
         <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
@@ -48,7 +48,7 @@
         <table class="table table-border table-bordered table-bg table-hover table-sort">
             <thead>
             <tr class="text-c">
-                <th width="40"><input name="" type="checkbox" value=""></th>
+                <th width="40"><input name="ids" type="checkbox" value=""></th>
                 <th width="80">ID</th>
                 <th width="100">分类名称</th>
                 <th width="100">字典代码</th>
@@ -60,9 +60,9 @@
             </tr>
             </thead>
             <tbody>
-            <?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="text-c">
-                <td><input name="" type="checkbox" value=""></td>
-                <td><?php echo ($vo['id']); ?></td>
+            <?php if(is_array($list)): foreach($list as $k=>$vo): ?><tr class="text-c">
+                <td><input name="array_ids" type="checkbox" value="<?php echo ($vo['id']); ?>"></td>
+                <td><?php echo ($k + 1); ?></td>
                 <td><?php echo ($vo['category']); ?></td>
                 <td class="text-c"><?php echo ($vo['code']); ?></td>
                 <td class="text-c"><?php echo ($vo['value']); ?></td>
@@ -81,7 +81,7 @@
 <script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>layer/2.4/layer.js"></script>
 <script type="text/javascript" src="<?php echo (HUI_JS_URL); ?>H-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo (HUI_ADMIN_JS_URL); ?>H-ui.admin.js"></script>
-<script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>Validform/5.3.2/Validform.js/Validform.min.js"></script>
+<script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>Validform/5.3.2/Validform.min.js"></script>
 <!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
@@ -196,6 +196,22 @@
     /*字典-添加*/
     function dictionary_add(title,url,w,h){
         layer_show(title,url,w,h);
+    }
+
+    /**
+     * 获取checkbox的值
+     */
+
+    function getCheckBoxValues() {
+        console.log("this is a test");
+        $("input[name='array_ids'][checked]").each(function () {
+            console.log(this.value + "  ");
+        })
+    }
+
+    /*字典--批量删除*/
+    function datadel() {
+        getCheckBoxValues();
     }
 </script>
 </body>

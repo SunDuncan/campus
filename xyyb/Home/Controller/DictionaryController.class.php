@@ -75,4 +75,13 @@ class DictionaryController extends BackendController {
         $data = $this->dictionaryModel->getDictionaries();
         return $this->dictionaryService->formatDictionary($data);
     }
+
+    public function delDictionaries() {
+        $post = I('post.');
+        var_dump($post);
+    }
+
+    public function delDictionary() {
+
+    }
 }

@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_CSS_URL); ?>H-ui.admin.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_LIB); ?>Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_SKIN_URL); ?>default/skin.css" id="skin" />
-    <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_CSS_URL); ?>css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo (HUI_ADMIN_CSS_URL); ?>style.css" />
     <link rel="stylesheet" href="<?php echo (HUI_ADMIN_LIB); ?>zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <!--[if IE 6]>
     <script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -38,7 +38,7 @@
 <table class="table">
     <tr>
         <td width="200" class="va-t"><ul id="treeDemoList" class="ztree"></ul></td>
-        <td class="va-t"><iframe ID="testIframeList" Name="testIframeList" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=390px SRC="showlist.html"></iframe></td>
+        <td class="va-t"><iframe ID="testIframeList" Name="testIframeList" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=800px SRC="showlist.html"></iframe></td>
     </tr>
 </table>
 
@@ -47,7 +47,7 @@
 <script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>layer/2.4/layer.js"></script>
 <script type="text/javascript" src="<?php echo (HUI_JS_URL); ?>H-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo (HUI_ADMIN_JS_URL); ?>H-ui.admin.js"></script>
-<script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>Validform/5.3.2/Validform.js/Validform.min.js"></script>
+<script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>Validform/5.3.2/Validform.min.js"></script>
 <!--/_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="<?php echo (HUI_ADMIN_LIB); ?>zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
 <script type="text/javascript">

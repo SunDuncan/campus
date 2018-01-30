@@ -3,10 +3,10 @@
 </head>
 <body>
 <div class="page-container">
-    <div class="text-c"> 日期范围：
-        <input type="text" onfocus="WdatePicker({ maxDate: '{$START_MAX_DATE}' })" id="logmin" class="input-text Wdate" style="width:120px;">
-         -
-        <input type="text" onfocus="WdatePicker({ minDate:'{$END_MIN_DATE}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
+    <div class="text-c">
+        <!--<input type="text" onfocus="WdatePicker({ maxDate: '{$START_MAX_DATE}' })" id="logmin" class="input-text Wdate" style="width:120px;">-->
+         <!-- - -->
+        <!--<input type="text" onfocus="WdatePicker({ minDate:'{$END_MIN_DATE}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">-->
         <input type="text" name="" id="" placeholder=" 字典代码" style="width:120px" class="input-text">
         <input type="text" name="" id="" placeholder=" 字典值" style="width:120px" class="input-text">
         <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
@@ -16,7 +16,7 @@
         <table class="table table-border table-bordered table-bg table-hover table-sort">
             <thead>
             <tr class="text-c">
-                <th width="40"><input name="" type="checkbox" value=""></th>
+                <th width="40"><input name="ids" type="checkbox" value=""></th>
                 <th width="80">ID</th>
                 <th width="100">分类名称</th>
                 <th width="100">字典代码</th>
@@ -28,10 +28,10 @@
             </tr>
             </thead>
             <tbody>
-            <foreach name="list" item="vo">
+            <foreach name="list" item="vo" key="k">
             <tr class="text-c">
-                <td><input name="" type="checkbox" value=""></td>
-                <td>{$vo['id']}</td>
+                <td><input name="array_ids" type="checkbox" value="{$vo['id']}"></td>
+                <td>{$k + 1}</td>
                 <td>{$vo['category']}</td>
                 <td class="text-c">{$vo['code']}</td>
                 <td class="text-c">{$vo['value']}</td>
@@ -160,6 +160,22 @@
     /*字典-添加*/
     function dictionary_add(title,url,w,h){
         layer_show(title,url,w,h);
+    }
+
+    /**
+     * 获取checkbox的值
+     */
+
+    function getCheckBoxValues() {
+        console.log("this is a test");
+        $("input[name='array_ids'][checked]").each(function () {
+            console.log(this.value + "  ");
+        })
+    }
+
+    /*字典--批量删除*/
+    function datadel() {
+        getCheckBoxValues();
     }
 </script>
 </body>
