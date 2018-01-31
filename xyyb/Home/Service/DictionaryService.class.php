@@ -24,9 +24,28 @@
         }
 
         public function formatDictionary($data) {
+            $data = $this->dictionary_model->getDictionaries($data);
+            $count = $this->dictionary_model->countDictionary($data);
+            $return['count'] = $count;
             foreach ($data as $key => $value) {
                 $data[$key]['parent_info'] = $this->dictionary_config[$value['parent']];
             }
-            return $data;
+            $return['data'] = $data;
+            return $return;
+        }
+
+        /**
+         * 按等级分类
+         */
+        public function levelCategories() {
+            $data = $this->dictionary_model->getDictionaries();
+            $return = [];
+            foreach ($data as &$vo) {
+                if (empty($return[$vo['level']])) {
+                    $return[$vo['level']] = [];
+                }
+                array_push($return[$vo['level']], $vo);
+            }
+            return $return;
         }
     }

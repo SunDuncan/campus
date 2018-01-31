@@ -33,15 +33,22 @@ class DictionaryController extends BackendController {
             $this->display();
     }
 
+    /**
+     * 同步到实际的数据
+     */
     public function index() {
+        $list_data = $this->dictionaryService->formatDictionary();
+        $this->assign("list_data", $list_data['data']);
         $this->display();
     }
 
     public function showList() {
         $end_min_date = '#F{$dp.$D(' . '\\' . '\'logmin' . '\\' . '\'' . ')}';
         $start_max_date = '#F{$dp.$D(' . '\\' . '\'logmax' . '\\' . '\')||' . '\\' . '\'%y-%M-%d' . '\\' . '\'}';
-        $list_data = $this->getDictionaries();
-        $this->assign('list', $list_data);
+        $data = I('get.') ? I("get.") : [];
+        $list_data = $this->getDictionaries($data);
+        $this->assign('list', $list_data['data']);
+        $this->assign('count', $list_data['count']);
         $this->assign('START_MAX_DATE', $start_max_date);
         $this->assign('END_MIN_DATE', $end_min_date);
         $this->display();
@@ -71,9 +78,9 @@ class DictionaryController extends BackendController {
         }
     }
     
-    public function getDictionaries() {
-        $data = $this->dictionaryModel->getDictionaries();
-        return $this->dictionaryService->formatDictionary($data);
+    public function getDictionaries($data) {
+        $dictionaries = $this->dictionaryService->formatDictionary($data);
+        return $dictionaries;
     }
 
     public function delDictionaries() {
