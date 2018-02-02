@@ -32,14 +32,18 @@
                 var zTree = $.fn.zTree.getZTreeObj("tree");
                 if (treeNode.isParent) {
                     var test = '{:U("adddictionary")}';
-                    test = test.replace(/\.html/, '') + "/id/" + treeNode.id + "/pid/" + treeNode.pId + "/name/" + treeNode.name + "/level/" + treeNode.level;
+                    test = test.replace(/\.html/, '') + "/id/" + treeNode.id +  "/name/" + treeNode.name + "/level/" + treeNode.level;
                     demoIframe.attr("src",test);
-
+                    console.log(test);
                     return false;
                 } else {
                     var test = '{:U("adddictionary")}';
+                    if (!treeNode.pId) {
+                        treeNode.pId = 0;
+                    }
                     test = test.replace(/\.html/, '') + "/id/" + treeNode.id + "/pid/" + treeNode.pId + "/name/" + treeNode.name + "/level/" + treeNode.level;
                     demoIframe.attr("src",test);
+                    console.log(test);
                     return true;
                 }
             }
@@ -48,7 +52,7 @@
 
     var objectNodes = {};
     var zNodes =[
-        { id:1, pId:0, name:"校园佣兵", open:true},
+
     ];
 
     <foreach name="list_data" item="vo" key="k">

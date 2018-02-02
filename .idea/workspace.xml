@@ -8,7 +8,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +22,8 @@
       <file leaf-file-name="DictionaryController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="39" column="66" lean-forward="false" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+            <state relative-caret-position="219">
+              <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
               <folding>
                 <element signature="e#6#126#0#PHP" expanded="true" />
                 <element signature="e#154#185#0#PHP" expanded="true" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="437">
+              <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -62,18 +61,8 @@
       <file leaf-file-name="adddictionary.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1058">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            <state relative-caret-position="115">
+              <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -83,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Public/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
-              <caret line="24" column="68" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="68" />
+              <caret line="24" column="68" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -103,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listindex.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1012">
-              <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="45" />
+              <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -112,8 +101,8 @@
       <file leaf-file-name="DictionaryModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="219">
+              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
@@ -124,8 +113,18 @@
       <file leaf-file-name="DictionaryService.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="150">
+              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackendController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/BackendController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -182,10 +181,10 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Public/header.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php" />
-        <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" />
       </list>
     </option>
@@ -219,8 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -447,6 +444,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -567,25 +566,28 @@
       <workItem from="1517316912180" duration="2099000" />
       <workItem from="1517361079309" duration="223000" />
       <workItem from="1517375665779" duration="8083000" />
-      <workItem from="1517389453932" duration="115000" />
+      <workItem from="1517389453932" duration="380000" />
+      <workItem from="1517392953171" duration="187000" />
+      <workItem from="1517561504288" duration="2608000" />
+      <workItem from="1517564576819" duration="2411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63890000" />
+    <option name="totallyTimeSpent" value="69361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24520256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.020607375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22342733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -645,13 +647,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Runtime/Cache/Home/de7bf3ee90af6b395cb64cd9a07d3509.php" />
     <entry file="file://$PROJECT_DIR$/H-ui/lib/ztree/zTreeStyle.css" />
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/BackendController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/product-category.html" />
     <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/product-category-add.html" />
     <entry file="file://$PROJECT_DIR$/xyyb/Public/lib/My97DatePicker/4.8/calendar.js">
@@ -837,37 +832,8 @@
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Public/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
-          <caret line="24" column="68" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="68" />
+          <caret line="24" column="68" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="68" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="39" column="66" lean-forward="false" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-          <folding>
-            <element signature="e#6#126#0#PHP" expanded="true" />
-            <element signature="e#154#185#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -888,23 +854,60 @@
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listindex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
-          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="45" />
+          <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="115">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/BackendController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
+          <folding>
+            <element signature="e#6#126#0#PHP" expanded="true" />
+            <element signature="e#154#185#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        <state relative-caret-position="437">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding />
         </state>
       </provider>

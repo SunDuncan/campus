@@ -58,19 +58,10 @@ class DictionaryController extends BackendController {
         $this->display();
     }
 
-    public function post() {
-        $post = I('post.');
-        $data = [];
-        $data['parent'] = $post['p_id'];
-        $data['category'] = $post['d_name'];
-        $data['code'] = $post['d_code'];
-        $data['value'] = $post['d_value'];
-        $data['level'] = $post['d_level'];
-        $this->setDictionary($data);
-    }
 
-    public function setDictionary($data) {
-        $res = $this->dictionaryModel->setDictionary($data);
+    public function setDictionary() {
+        $data = I('post.');
+        $res = $this->dictionaryService->setDictionary($data);
         if (!$res) {
             $this->error("添加失败");
         } else {

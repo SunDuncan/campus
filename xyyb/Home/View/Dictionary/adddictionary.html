@@ -3,13 +3,13 @@
 </head>
 <body>
 <div class="page-container">
-    <form action="{:U('dictionary/post')}" method="post" class="form form-horizontal" id="form-user-add">
+    <form action="{:U('dictionary/setDictionary')}" method="post" class="form form-horizontal" id="form-user-add">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">
                 <span class="c-red">*</span>
                 父级分类名称：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" value="{$name}" placeholder="" id=d_name" name="d_name">
+                <input type="text" class="input-text" value="{$name}" placeholder="" id=d_name" name="d_name" readonly>
                 <input type="hidden" name="p_id" value="{$id}">
                 <input type="hidden" name="d_level" value="{$level}">
             </div>

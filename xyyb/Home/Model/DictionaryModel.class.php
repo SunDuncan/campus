@@ -44,5 +44,31 @@ class DictionaryModel extends Model {
         }
     }
 
+    public function getDictionaryOriginIds($id) {
+        if (empty($id)) {
+            return ;
+        }
+
+        $map['id'] = $id;
+        return $this->where($map)->getField('origin_ids');
+    }
+
+    public function getDictionaryOriginCodes($id) {
+        if (empty($id)) {
+            return ;
+        }
+
+        $map['id'] = $id;
+        return $this->where($map)->getField('origin_codes');
+    }
+
+    public function getDictionaryCode($id) {
+        if (empty($id)) {
+            return ;
+        }
+
+        $map['id'] = $id;
+        return $this->where($map)->getField('code');
+    }
 
 }
