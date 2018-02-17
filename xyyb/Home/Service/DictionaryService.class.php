@@ -17,15 +17,15 @@
             $this->dictionary_model = new DictionaryModel();
         }
 
-        public function formatDictionary($data) {
-            $data = $this->dictionary_model->getDictionaries($data);
+        public function formatDictionary($data = []) {
+            $dat = $this->dictionary_model->getDictionaries($data);
             $count = $this->dictionary_model->countDictionary($data);
             $this->dictionary_config = $this->getDictionConfig();
             $return['count'] = $count;
-            foreach ($data as $key => $value) {
-                $data[$key]['parent_info'] = $this->dictionary_config[$value['parent']];
+            foreach ($dat as $key => $value) {
+                $dat[$key]['parent_info'] = $this->dictionary_config[$value['parent']];
             }
-            $return['data'] = $data;
+            $return['data'] = $dat;
             return $return;
         }
 
@@ -59,7 +59,11 @@
         /**
          * 数据的封装检验
          */
-        public function setDictionary($data) {
+        /**
+         * @param $data
+         * @return bool|mixed
+         */
+        public function setDictionary($data = []) {
             if (!$data['p_id']){
                 $insertData['level'] = 1;
             } else {
@@ -93,15 +97,15 @@
             return $this->dictionary_model->setDictionary($insertData);
         }
 
-        public function getDictionaryOriginIds($id) {
+        public function getDictionaryOriginIds($id = null) {
             return $this->dictionary_model->getDictionaryOriginIds($id);
         }
 
-        public function getDictionaryOriginCodes($id) {
+        public function getDictionaryOriginCodes($id = null) {
             return $this->dictionary_model->getDictionaryOriginCodes($id);
         }
 
-        public function getDictionaryCode($id) {
+        public function getDictionaryCode($id = null) {
             return $this->dictionary_model->getDictionaryCode($id);
         }
     }

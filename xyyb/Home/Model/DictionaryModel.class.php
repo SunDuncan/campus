@@ -8,7 +8,7 @@
 namespace Home\Model;
 use Think\Model;
 class DictionaryModel extends Model {
-    public function setDictionary($data){
+    public function setDictionary($data = []){
         if (empty($data)) {
             return false;
         }
@@ -17,7 +17,7 @@ class DictionaryModel extends Model {
         return $this->add($data);
     }
 
-    public function getDictionaries($data) {
+    public function getDictionaries($data = []) {
         if (empty($data)) {
             return $this->order("createTime desc")->select();
         } else {
@@ -26,7 +26,7 @@ class DictionaryModel extends Model {
         }
     }
 
-    public function getDictionary($id) {
+    public function getDictionary($id = null) {
         if (empty($id)) {
             return false;
         }
@@ -35,7 +35,7 @@ class DictionaryModel extends Model {
         return  $this->where($map)->find();
     }
 
-    public function countDictionary() {
+    public function countDictionary($data = []) {
         if (empty($data)) {
             return $this->count();
         } else {
@@ -44,7 +44,7 @@ class DictionaryModel extends Model {
         }
     }
 
-    public function getDictionaryOriginIds($id) {
+    public function getDictionaryOriginIds($id = null) {
         if (empty($id)) {
             return ;
         }
@@ -53,7 +53,7 @@ class DictionaryModel extends Model {
         return $this->where($map)->getField('origin_ids');
     }
 
-    public function getDictionaryOriginCodes($id) {
+    public function getDictionaryOriginCodes($id = null ) {
         if (empty($id)) {
             return ;
         }
@@ -62,7 +62,7 @@ class DictionaryModel extends Model {
         return $this->where($map)->getField('origin_codes');
     }
 
-    public function getDictionaryCode($id) {
+    public function getDictionaryCode($id = null) {
         if (empty($id)) {
             return ;
         }

@@ -68,8 +68,12 @@ class DictionaryController extends BackendController {
             $this->success("添加成功");
         }
     }
-    
-    public function getDictionaries($data) {
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public function getDictionaries($data = []) {
         $dictionaries = $this->dictionaryService->formatDictionary($data);
         return $dictionaries;
     }
