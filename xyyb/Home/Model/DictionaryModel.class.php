@@ -19,10 +19,10 @@ class DictionaryModel extends Model {
 
     public function getDictionaries($data) {
         if (empty($data)) {
-            return $this->order("level desc")->select();
+            return $this->order("createTime desc")->select();
         } else {
             $map = $data;
-            return $this->where($map)->order("level desc")->select();
+            return $this->where($map)->order("createTime desc")->select();
         }
     }
 
