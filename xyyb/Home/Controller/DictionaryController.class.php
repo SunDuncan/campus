@@ -33,11 +33,21 @@ class DictionaryController extends BackendController {
             $this->display();
     }
 
+    public function setDictionary() {
+        $data = I('post.');
+        $res = $this->dictionaryService->setDictionary($data);
+        if (!$res) {
+            $this->error("添加失败");
+        } else {
+            $this->success("添加成功");
+        }
+    }
+    /**************************************************************/
     /**
      * 同步到实际的数据
      */
     public function index() {
-        $list_data = $this->dictionaryService->formatDictionary();
+        $list_data = $this->dictionaryService->formatTreeDictionary();
         $this->assign("list_data", $list_data['data']);
         $this->display();
     }
@@ -55,19 +65,13 @@ class DictionaryController extends BackendController {
     }
 
     public function listIndex() {
+        $id = I('get.id');
+        $list_data = $this->dictionaryService->formatTreeDictionary();
+        $this->assign("list_data", $list_data['data']);
+        $this->assign("id", $id);
         $this->display();
     }
 
-
-    public function setDictionary() {
-        $data = I('post.');
-        $res = $this->dictionaryService->setDictionary($data);
-        if (!$res) {
-            $this->error("添加失败");
-        } else {
-            $this->success("添加成功");
-        }
-    }
 
     /**
      * @param $data
@@ -78,12 +82,47 @@ class DictionaryController extends BackendController {
         return $dictionaries;
     }
 
+    /**************************************************************/
+    /**
+     * 逻辑删除
+     */
     public function delDictionaries() {
         $post = I('post.');
-        var_dump($post);
+        $ids  = $post['ids'];
+        $res = $this->dictionaryService->delDictionaries($ids);
+        if (!$res) {
+            $this->ajaxError('失败', '字典批量删除失败', 400);
+        } else {
+            $this->ajaxSuccess($res);
+        }
     }
 
     public function delDictionary() {
+        $post = I('post.');
+        $id = $post['id'];
+        $res = $this->dictionaryService->delDictionary($id);
+        if (!$res) {
+            $this->ajaxError('失败', '字典删除失败', 400);
+        } else {
+            $this->ajaxSuccess($res);
+        }
+    }
+    /************************************************************/
 
+    public function editDictionary() {
+        $id = I('get.id');
+        $data = $this->dictionaryService->getDictionary($id);
+        $this->assign("list_data", $data);
+        $this->display();
+    }
+
+    public function saveDictionary() {
+        $data = I('post.');
+        $res = $this->dictionaryService->setDictionary($data);
+        if (!$res) {
+            $this->error("修改失败");
+        } else {
+            $this->success("修改成功");
+        }
     }
 }

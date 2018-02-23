@@ -19,11 +19,20 @@ class DictionaryModel extends Model {
 
     public function getDictionaries($data = []) {
         if (empty($data)) {
-            return $this->order("createTime desc")->select();
+            return $this->order("isActive desc,createTime desc")->select();
         } else {
             $map = $data;
-            return $this->where($map)->order("createTime desc")->select();
+            return $this->where($map)->order("isActive desc,createTime desc")->select();
         }
+    }
+
+    /**
+     * @param array $data
+     * @return mixed
+     * 查询树结构
+     */
+    public function getTreeDictionaries($data = []) {
+        return $this->where('isActive=1')->order("level")->select();
     }
 
     public function getDictionary($id = null) {
@@ -70,5 +79,37 @@ class DictionaryModel extends Model {
         $map['id'] = $id;
         return $this->where($map)->getField('code');
     }
+
+    /**
+     * @param $ids
+     * @return mixed|void
+     * 不做物理删除，咱不用这个函数
+     */
+    public function delDictionaries($ids) {
+        if (empty($ids)) {
+            return ;
+        }
+
+        return $this->delete($ids);
+    }
+
+    public function delDictionary($id) {
+        if (empty($id)) {
+            return ;
+        }
+
+        $save_data['id'] = $id;
+        $save_data['isActive'] = 0;
+        return $this->save($save_data);
+    }
+
+    public function saveDictionary($data) {
+        if (empty($data['id'])) {
+            return ;
+        }
+
+        return $this->save($data);
+    }
+
 
 }

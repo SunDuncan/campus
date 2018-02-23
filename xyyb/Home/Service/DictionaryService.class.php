@@ -29,6 +29,18 @@
             return $return;
         }
 
+        public function formatTreeDictionary($data = []) {
+            $dat = $this->dictionary_model->getTreeDictionaries($data);
+            $count = $this->dictionary_model->countDictionary($data);
+            $this->dictionary_config = $this->getDictionConfig();
+            $return['count'] = $count;
+            foreach ($dat as $key => $value) {
+                $dat[$key]['parent_info'] = $this->dictionary_config[$value['parent']];
+            }
+            $return['data'] = $dat;
+            return $return;
+        }
+
         /**
          * 按等级分类
          */
@@ -58,6 +70,7 @@
 
         /**
          * 数据的封装检验
+         * 添加数据
          */
         /**
          * @param $data
@@ -107,5 +120,63 @@
 
         public function getDictionaryCode($id = null) {
             return $this->dictionary_model->getDictionaryCode($id);
+        }
+
+        /**
+         * @param $ids
+         * @return mixed|void
+         *
+         * 批量删除
+         */
+        public function delDictionaries($ids) {
+            if (empty($ids)) {
+                return ;
+            }
+
+            $array_id = explode("," , $ids);
+            M()->startTrans();
+            $res = 0;
+            foreach ($array_id as &$id) {
+                $res = $this->dictionary_model->delDictionary($id);
+                if(!$res) {
+                    M()->rollback();
+                    return ;
+                }
+            }
+            M()->commit();
+            return $res;
+        }
+
+        /**
+         * 单个删除
+         */
+        /**
+         * @param $id
+         * @return bool|void
+         */
+        public function delDictionary($id) {
+            if (empty($id)) {
+                return ;
+            }
+
+            $res = $this->dictionary_model->delDictionary($id);
+            if (!$res) {
+                return ;
+            }
+            return $res;
+        }
+
+        public function getDictionary($id) {
+            if (empty($id)) {
+                return ;
+            }
+
+            $res = $this->dictionary_model->getDictionary($id);
+            if ($res['parent'] == 0) {
+                $res['p_name'] = "最高层";
+            } else {
+                $res['p_name'] = $this->dictionary_model->getDictionary($res['parent'])['value'];
+            }
+            return $res;
         }
     }
