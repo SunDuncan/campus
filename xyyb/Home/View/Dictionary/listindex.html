@@ -32,7 +32,7 @@
                 var zTree = $.fn.zTree.getZTreeObj("tree");
                 if (treeNode.isParent) {
                     var test = '{:U("editdictionary")}';
-                    test = test.replace(/\.html/, '') + "/id/" + treeNode.id +  "/name/" + treeNode.name + "/level/" + treeNode.level;
+                    test = test.replace(/\.html/, '') + "/p_id/" + treeNode.id +  "/name/" + treeNode.name + "/level/" + treeNode.level;
                     demoIframe.attr("src",test);
                     console.log(test);
                     return false;

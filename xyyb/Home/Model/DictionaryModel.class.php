@@ -108,6 +108,7 @@ class DictionaryModel extends Model {
             return ;
         }
 
+        $data['createTime'] = date('Y-m-j',time());
         return $this->save($data);
     }
 

@@ -166,7 +166,7 @@
             return $res;
         }
 
-        public function getDictionary($id) {
+        public function getDictionary($id = '') {
             if (empty($id)) {
                 return ;
             }
@@ -177,6 +177,23 @@
             } else {
                 $res['p_name'] = $this->dictionary_model->getDictionary($res['parent'])['value'];
             }
+            return $res;
+        }
+
+        /**
+         * @param array $data
+         * @return bool|void
+         */
+        public function saveDictionary($data=[]) {
+            if (empty($data)) {
+                return ;
+            }
+
+            $save_data['parent'] = $data['p_id'];
+            $save_data['code'] = $data['d_code'];
+            $save_data['value'] = $data['d_value'];
+            $save_data['id'] = $data['id'];
+            $res = $this->dictionary_model->saveDictionary($save_data);
             return $res;
         }
     }
