@@ -4,13 +4,10 @@
 <body>
 <div class="page-container">
     <div class="text-c">
-        <!--<input type="text" onfocus="WdatePicker({ maxDate: '{$START_MAX_DATE}' })" id="logmin" class="input-text Wdate" style="width:120px;">-->
-         <!-- - -->
-        <!--<input type="text" onfocus="WdatePicker({ minDate:'{$END_MIN_DATE}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">-->
-        <input type="text" name="code" id="" placeholder=" 字典代码" style="width:120px" class="input-text">
-        <input type="text" name="value" id="" placeholder=" 字典值" style="width:120px" class="input-text">
-        <input type="text" name="level" id="" placeholder="层级" style="width:120px" class="input-text">
-        <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
+        <input type="text" name="code" id="code" placeholder=" 字典代码" style="width:120px" class="input-text">
+        <input type="text" name="value" id="value" placeholder=" 字典值" style="width:120px" class="input-text">
+        <input type="text" name="level" id="level" placeholder="层级" style="width:120px" class="input-text">
+        <button name="check" id="d_check" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="delAll()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="dictionary_add('添加字典','{:U('Dictionary/index')}', '', '450')", href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加字典</a></span> <span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
     <div class="mt-20">
@@ -62,18 +59,6 @@
             {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
         ]
     });
-
-
-//    /*图片-编辑*/
-//    function picture_edit(title,url,id){
-//        var index = layer.open({
-//            type: 2,
-//            title: title,
-//            content: url
-//        });
-//        layer.full(index);
-//    }
-
 
     /*字典-添加*/
     function dictionary_add(title,url,w,h){

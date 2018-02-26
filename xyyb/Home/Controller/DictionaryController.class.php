@@ -56,8 +56,6 @@ class DictionaryController extends BackendController {
         $end_min_date = '#F{$dp.$D(' . '\\' . '\'logmin' . '\\' . '\'' . ')}';
         $start_max_date = '#F{$dp.$D(' . '\\' . '\'logmax' . '\\' . '\')||' . '\\' . '\'%y-%M-%d' . '\\' . '\'}';
         $data = I('get.') ? I("get.") : [];
-        var_dump($data);
-        exit;
         $list_data = $this->getDictionaries($data);
         $this->assign('list', $list_data['data']);
         $this->assign('count', $list_data['count']);
