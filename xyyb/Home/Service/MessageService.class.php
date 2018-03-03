@@ -8,5 +8,13 @@
  **/
 namespace Home\Service;
 class MessageService extends  BaseService {
+    /**
+     * 查询获取消息
+     */
+    public function  getMessages($data = []) {
+        /**
+         * 筛选条件
+         */
 
+    }
 }
