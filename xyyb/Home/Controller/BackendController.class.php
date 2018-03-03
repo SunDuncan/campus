@@ -22,11 +22,12 @@ class BackendController extends Controller
      */
     public function ajaxSuccess($data = '', $msg = '操作成功', $code = 200)
     {
-        $return = array(
+
+        $return = [
             'code' => $code,
             'msg' => $msg,
             'data' => $data
-        );
+        ];
         $this->ajaxReturn($return);
     }
 
@@ -40,11 +41,11 @@ class BackendController extends Controller
      */
     public function ajaxError($data = '', $msg = '', $code = '')
     {
-        $return = array(
+        $return = [
             'code' => $code,
             'msg' => $msg,
             'data' => $data
-        );
+        ];
         $this->ajaxReturn($return);
     }
 }

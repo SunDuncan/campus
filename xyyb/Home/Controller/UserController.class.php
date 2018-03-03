@@ -6,6 +6,7 @@
  * Time: 13:26
  */
 namespace Home\Controller;
+<<<<<<< HEAD
 use Home\Model\UsersModel;
 use Home\Service\UserService;
 class UserController extends BackendController {
@@ -19,6 +20,11 @@ class UserController extends BackendController {
     }
     public function  addUser() {
        $this->display();
+=======
+class UserController extends BackendController {
+    public function  addUser() {
+        $this->display();
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
     }
 
     public function postUser() {
@@ -26,6 +32,7 @@ class UserController extends BackendController {
     }
 
     public function showList() {
+<<<<<<< HEAD
 
          $this->display();
     }
@@ -304,4 +311,8 @@ class UserController extends BackendController {
 
    }
 
+=======
+        $this->display();
+    }
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
 }

@@ -20,7 +20,7 @@ define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));
 if(MEMORY_LIMIT_ON) $GLOBALS['_startUseMems'] = memory_get_usage();
 
 // 版本信息
-const THINK_VERSION     =   '3.2.3';
+const THINK_VERSION     =   "3.2.3";
 
 // URL 模式定义
 const URL_COMMON        =   0;  //普通模式
@@ -70,7 +70,8 @@ if(version_compare(PHP_VERSION,'5.4.0','<')) {
 }else{
     define('MAGIC_QUOTES_GPC',false);
 }
-define('IS_CGI',(0 === strpos(PHP_SAPI,'cgi') || false !== strpos(PHP_SAPI,'fcgi')) ? 1 : 0 );
+//define('IS_CGI',(0 === strpos(PHP_SAPI,'cgi') || false !== strpos(PHP_SAPI,'fcgi')) ? 1 : 0 );
+define('IS_CGI', substr(PHP_SAPI, 0, 3) == 'cgi' ? 1 : 0);
 define('IS_WIN',strstr(PHP_OS, 'WIN') ? 1 : 0 );
 define('IS_CLI',PHP_SAPI=='cli'? 1   :   0);
 

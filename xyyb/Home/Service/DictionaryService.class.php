@@ -8,7 +8,11 @@
      **/
     namespace Home\Service;
     use Home\Model\DictionaryModel;
+<<<<<<< HEAD
     class DictionaryService
+=======
+    class DictionaryService extends BaseService
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
     {
         protected $dictionary_model = null;
         protected $dictionary_config = null;
@@ -17,7 +21,11 @@
             $this->dictionary_model = new DictionaryModel();
         }
 
+<<<<<<< HEAD
         public function formatDictionary($data = array()) {
+=======
+        public function formatDictionary($data = []) {
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
             $dat = $this->dictionary_model->getDictionaries($data);
             $count = $this->dictionary_model->countDictionary($data);
             $this->dictionary_config = $this->getDictionConfig();
@@ -29,7 +37,11 @@
             return $return;
         }
 
+<<<<<<< HEAD
         public function formatTreeDictionary($data = array()) {
+=======
+        public function formatTreeDictionary($data = []) {
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
             $dat = $this->dictionary_model->getTreeDictionaries($data);
             $count = $this->dictionary_model->countDictionary($data);
             $this->dictionary_config = $this->getDictionConfig();
@@ -46,10 +58,17 @@
          */
         public function levelCategories() {
             $data = $this->dictionary_model->getDictionaries();
+<<<<<<< HEAD
             $return = array();
             foreach ($data as &$vo) {
                 if (empty($return[$vo['level']])) {
                     $return[$vo['level']] = array();
+=======
+            $return = [];
+            foreach ($data as &$vo) {
+                if (empty($return[$vo['level']])) {
+                    $return[$vo['level']] = [];
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
                 }
                 array_push($return[$vo['level']], $vo);
             }
@@ -61,7 +80,11 @@
          */
         public function getDictionConfig() {
             $dictionary_data = $this->dictionary_model->getDictionaries();
+<<<<<<< HEAD
             $tempData = array();
+=======
+            $tempData = [];
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
             foreach ($dictionary_data as $value) {
                 $tempData[$value['id']] = $value['code'] . "-->" . $value['value'];
             }
@@ -76,7 +99,11 @@
          * @param $data
          * @return bool|mixed
          */
+<<<<<<< HEAD
         public function setDictionary($data = array()) {
+=======
+        public function setDictionary($data = []) {
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
             if (!$data['p_id']){
                 $insertData['level'] = 1;
             } else {
@@ -175,7 +202,10 @@
             if ($res['parent'] == 0) {
                 $res['p_name'] = "最高层";
             } else {
+<<<<<<< HEAD
                 //这里更改了，暂时['value']
+=======
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
                 $res['p_name'] = $this->dictionary_model->getDictionary($res['parent'])['value'];
             }
             return $res;
@@ -185,7 +215,11 @@
          * @param array $data
          * @return bool|void
          */
+<<<<<<< HEAD
         public function saveDictionary($data=array()) {
+=======
+        public function saveDictionary($data=[]) {
+>>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
             if (empty($data)) {
                 return ;
             }

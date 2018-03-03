@@ -55,9 +55,7 @@ class DictionaryController extends BackendController {
     public function showList() {
         $end_min_date = '#F{$dp.$D(' . '\\' . '\'logmin' . '\\' . '\'' . ')}';
         $start_max_date = '#F{$dp.$D(' . '\\' . '\'logmax' . '\\' . '\')||' . '\\' . '\'%y-%M-%d' . '\\' . '\'}';
-        $data = I('get.') ? I("get.") : array();
-        var_dump($data);
-        exit;
+        $data = I('get.') ? I("get.") : [];
         $list_data = $this->getDictionaries($data);
         $this->assign('list', $list_data['data']);
         $this->assign('count', $list_data['count']);
@@ -79,7 +77,7 @@ class DictionaryController extends BackendController {
      * @param $data
      * @return mixed
      */
-    public function getDictionaries($data = array()) {
+    public function getDictionaries($data = []) {
         $dictionaries = $this->dictionaryService->formatDictionary($data);
         return $dictionaries;
     }
