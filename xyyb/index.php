@@ -1,7 +1,7 @@
 <?php
     define("APP_DEBUG", true);
-    //define("CITE_ROOT", "https://duncan.ducnan.cn/");
-    define("CITE_ROOT", "http://localhost/");
+    define("CITE_ROOT", "https://duncan.ducnan.cn/");
+    //define("CITE_ROOT", "http://localhost/");
     define("HUI_CSS_URL", CITE_ROOT . "campus/xyyb/Public/h-ui/css/");
     define("HUI_JS_URL", CITE_ROOT . "campus/xyyb/Public/h-ui/js/");
     define("HUI_IMG_URL", CITE_ROOT . "campus/xyyb/Public/h-ui/images/");
