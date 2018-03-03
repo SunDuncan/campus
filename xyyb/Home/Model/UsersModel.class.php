@@ -4,7 +4,6 @@
  * User: Duncan
  * Date: 2018/1/19
  * Time: 13:41
-<<<<<<< HEAD
  */
 namespace Home\Model;
 use Think\Model;
@@ -17,6 +16,3 @@ class UsersModel extends Model {
 
 
 }
-=======
- */
->>>>>>> f884da018f787db3c7b4f049e374370ea35c7431
