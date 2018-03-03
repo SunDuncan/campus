@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8d216779-be1e-4b8f-b7e3-a397b6a8964b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/asv/asv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/chng/chng.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/cv/cv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/dfv/dfv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/fbv/fbv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/gb/gb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/ou/ou.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/xxx/xxx.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/榛戦┈/榛戦┈.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/榛戦/榛戦.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/uploads/里号/閲屽彿.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/campus.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/addDictionary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/editDictionary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Local.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Local.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Conf/config.php" afterPath="$PROJECT_DIR$/xyyb/Home/Conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/editdictionary.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/editdictionary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listindex.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listindex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/User/adduser.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/User/adduser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/index.php" afterPath="$PROJECT_DIR$/xyyb/index.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1259">
+              <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#104#0#PHP" expanded="true" />
+                <element signature="e#132#158#0#PHP" expanded="true" />
+                <marker date="1520086969134" expanded="true" signature="4635:4655" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="4751:4759" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="4778:4798" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="4981:4989" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="5008:5028" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="5147:5155" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="6277:6297" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="6393:6401" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="6420:6440" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="6623:6631" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="6650:6670" ph="..." />
+                <marker date="1520086969134" expanded="true" signature="6789:6797" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Local.class.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Conf/config.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/User/adduser.html" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
+        <option value="$PROJECT_DIR$/xyyb/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="148" />
+    <option name="y" value="239" />
+    <option name="width" value="1330" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\沈磊\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d216779-be1e-4b8f-b7e3-a397b6a8964b" name="Default" comment="" />
+      <created>1520073668721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520073668721</updated>
+      <workItem from="1520076177212" duration="34000" />
+      <workItem from="1520086657658" duration="669000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="703000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#104#0#PHP" expanded="true" />
+            <element signature="e#132#158#0#PHP" expanded="true" />
+            <marker date="1520086969134" expanded="true" signature="4635:4655" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="4751:4759" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="4778:4798" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="4981:4989" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="5008:5028" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="5147:5155" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6277:6297" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6393:6401" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6420:6440" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6623:6631" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6650:6670" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6789:6797" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Local.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="84" column="39" lean-forward="true" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <marker date="1520087161020" expanded="true" signature="4471:4491" ph="..." />
+            <marker date="1520087161020" expanded="true" signature="4581:4589" ph="..." />
+            <marker date="1520087161020" expanded="true" signature="4983:5003" ph="..." />
+            <marker date="1520087161020" expanded="true" signature="5092:5100" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="158" column="53" lean-forward="false" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4200">
+          <caret line="164" column="5" lean-forward="false" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1259">
+          <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#104#0#PHP" expanded="true" />
+            <element signature="e#132#158#0#PHP" expanded="true" />
+            <marker date="1520086969134" expanded="true" signature="4635:4655" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="4751:4759" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="4778:4798" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="4981:4989" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="5008:5028" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="5147:5155" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6277:6297" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6393:6401" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6420:6440" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6623:6631" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6650:6670" ph="..." />
+            <marker date="1520086969134" expanded="true" signature="6789:6797" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

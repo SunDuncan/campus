@@ -34,7 +34,9 @@ class UserController extends BackendController {
     {
 
         //首先查看的token是否符合
+
         /*
+
         if (!$this->userService->checkToken($_POST)) {
             $rn['flag']=false;
             $rn['information']='重复提交了';
@@ -56,9 +58,11 @@ class UserController extends BackendController {
             $upload->maxSize = 3145728;// 设置附件上传大小
             $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
             $upload->rootPath = './Uploads/'; // 设置附件上传根目录
+
             $upload->subName = array('date','YmdHis');
             $upload->savePath = '';
             $upload->saveName =array('uniqid','');
+
             // 上传文件
             $info = $upload->upload();
             if (!$info) {// 上传错误提示错误信息
@@ -185,7 +189,9 @@ class UserController extends BackendController {
     {
         $data['id']=I('post.id');
 
+
         $data['id']=(int)json_decode($data['id']);
+
         $res=$this->userService->deleteUser($data);
         if ($res) {
 
@@ -218,7 +224,9 @@ class UserController extends BackendController {
     {
 
         $data=I('post.');
+
         //$flag=$this->userService->checkToken($data);
+
 
             //首先就是处理文件的上传
             $da['id']=$data['id'];
@@ -230,13 +238,16 @@ class UserController extends BackendController {
             }
             else {
                 //进行观看用户名是否已经被修改了
+
                 //获取用户存储的文件夹的名字
                 $dn=$this->userService->firstDel($data,$res);
+
             }
 
              if (empty($data['uploadfile'])) {
                 //空的文件的话，数据处理比对
                  $data['avatar']=$res['avatar'];
+
                  $data=$this->userService->delUpdate($data,$res);
                  $this->userService->updateUser($data);
 
@@ -253,6 +264,7 @@ class UserController extends BackendController {
                      $upload->subName = $dn;
                      $upload->savePath = '';
                      $upload->saveName =array('uniqid','');//
+
                      // 上传文件
                      $info = $upload->upload();
                      if (! $info) {
@@ -267,12 +279,15 @@ class UserController extends BackendController {
                          //$bg='./uploads/'.$info['files']['savepath'].$data['username'].'.'.$info['files']['ext'];
                          //rename($ig,$bg);
                          $data['avatar']='./uploads/'.$info['files']['savepath'].$info['files']['savename'];;
+
                          $this->userService->updateUser($data);
                          $rn['flag']=true;
                          $rn['information']='用户修改成功';
                          $this->ajaxReturn($rn);
 
                      }
+
+
 
 
 

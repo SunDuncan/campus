@@ -68,7 +68,9 @@
             async: true,
             success: function (result) {
               //  alert(result);
+
           fnCallback(result);//把返回的数据传给这个方法就可以了,datatable会自动绑定数据的
+
             },
             error:function(XMLHttpRequest, textStatus, errorThrown) {
                 alert("status:"+XMLHttpRequest.status+",readyState:"+XMLHttpRequest.readyState+",textStatus:"+textStatus);
@@ -168,6 +170,7 @@
     /*图片-删除*/
     function picture_del(obj,id){
   //http://localhost/campus/xyyb/index.php/Home/User/deleteUser
+
         layer.confirm('确认要删除吗？',function(index){
             $.ajax({
                 type: 'POST',
@@ -178,12 +181,14 @@
                 },
                 success: function(data){
                     if(data) {
+
                         $('.table-sort').dataTable().fnDraw(true);
                     }
                     else {
                         layer.msg('删除不成功',{icon:1},function(){
 
                         });
+
                     }
                 }  ,
                 error:function(data) {

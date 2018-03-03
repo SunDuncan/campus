@@ -149,7 +149,9 @@ class UserService
 
 public function firstDel($data,$res)
 {
+
     /*
+
     if($data['username'] !== $res['username'] ) {
         //重新命名文件夹的名
         rename('./uploads/'.$res['username'],'./uploads/'.$data['username']);
@@ -166,6 +168,7 @@ public function firstDel($data,$res)
     return $temp[2];
     //data['avatar']=$res['avatar'];
     //return $data;
+
 }
 
 
