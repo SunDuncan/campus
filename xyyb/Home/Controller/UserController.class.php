@@ -35,7 +35,10 @@ class UserController extends BackendController {
 
         //首先查看的token是否符合
         if (!$this->userService->checkToken($_POST)) {
-            $this->error('重复提交了， ');
+            $rn['flag']=false;
+            $rn['information']='重复提交了';
+            $this->ajaxReturn($rn);
+            //$this->error('重复提交了， ');
         }
 
 
@@ -52,13 +55,17 @@ class UserController extends BackendController {
             $upload->maxSize = 3145728;// 设置附件上传大小
             $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
             $upload->rootPath = './Uploads/'; // 设置附件上传根目录
-            $upload->subName = I('post.username') . '';
+            $upload->subName = I('post.username');
             $upload->savePath = '';
-            $upload->saveName = I('post.username') . '';
+            $upload->saveName = '12';//I('post.username');
             // 上传文件
             $info = $upload->upload();
             if (!$info) {// 上传错误提示错误信息
-                $this->error($upload->getError());
+                $rn['flag']=false;
+                $rn['information']=$upload->getError();
+                $this->ajaxReturn($rn);
+
+                //$this->error($upload->getError());
             } else {// 上传成功
 
                 $img_url = './uploads/' . '' . $info['files']['savepath'] . $info['files']['savename'];
@@ -73,15 +80,24 @@ class UserController extends BackendController {
                 $data['password'] = $this->userService->cryptPassword($data['password'], $key);
                 $data['createTime'] = $createTime;
                 if ($this->userService->addUser($data)) {
-                    $this->success('添加用户成功');
+                    $rn['flag']=true;
+                    $rn['information']='用户添加成功';
+                    $this->ajaxReturn($rn);
+                    //$this->success('添加用户成功');
                 } else {
-                    $this->error('添加失败');
+                    $rn['flag']=false;
+                    $rn['information']='用户添加失败';
+                    $this->ajaxReturn($rn);
+                    //$this->error('添加失败');
                 }
 
             }
 
         } else {
-            $this->error('用户名已经存在,请刷新页面后再次输入');
+             $rn['flag']=false;
+             $rn['information']='用户添加失败';
+             $this->ajaxReturn($rn);
+            // $this->error('用户名已经存在,请刷新页面后再次输入');
         }
 
     }
@@ -238,9 +254,9 @@ class UserController extends BackendController {
                      $upload->maxSize = 3145728;// 设置附件上传大小
                      $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
                      $upload->rootPath = './Uploads/'; // 设置附件上传根目录
-                     $upload->subName = I('post.username') . '';
+                     $upload->subName = I('post.username');
                      $upload->savePath = '';
-                     $upload->saveName =   'xx';
+                     $upload->saveName =  I('post.username');//
                      // 上传文件
                      $info = $upload->upload();
                      if (! $info) {

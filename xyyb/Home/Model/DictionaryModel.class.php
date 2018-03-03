@@ -8,7 +8,7 @@
 namespace Home\Model;
 use Think\Model;
 class DictionaryModel extends Model {
-    public function setDictionary($data = []){
+    public function setDictionary($data = array()){
         if (empty($data)) {
             return false;
         }
@@ -17,7 +17,7 @@ class DictionaryModel extends Model {
         return $this->add($data);
     }
 
-    public function getDictionaries($data = []) {
+    public function getDictionaries($data = array()) {
         if (empty($data)) {
             return $this->order("isActive desc,createTime desc")->select();
         } else {
@@ -31,7 +31,7 @@ class DictionaryModel extends Model {
      * @return mixed
      * 查询树结构
      */
-    public function getTreeDictionaries($data = []) {
+    public function getTreeDictionaries($data = array()) {
         return $this->where('isActive=1')->order("level")->select();
     }
 
@@ -44,7 +44,7 @@ class DictionaryModel extends Model {
         return  $this->where($map)->find();
     }
 
-    public function countDictionary($data = []) {
+    public function countDictionary($data = array()) {
         if (empty($data)) {
             return $this->count();
         } else {

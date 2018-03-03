@@ -17,7 +17,7 @@
             $this->dictionary_model = new DictionaryModel();
         }
 
-        public function formatDictionary($data = []) {
+        public function formatDictionary($data = array()) {
             $dat = $this->dictionary_model->getDictionaries($data);
             $count = $this->dictionary_model->countDictionary($data);
             $this->dictionary_config = $this->getDictionConfig();
@@ -29,7 +29,7 @@
             return $return;
         }
 
-        public function formatTreeDictionary($data = []) {
+        public function formatTreeDictionary($data = array()) {
             $dat = $this->dictionary_model->getTreeDictionaries($data);
             $count = $this->dictionary_model->countDictionary($data);
             $this->dictionary_config = $this->getDictionConfig();
@@ -46,10 +46,10 @@
          */
         public function levelCategories() {
             $data = $this->dictionary_model->getDictionaries();
-            $return = [];
+            $return = array();
             foreach ($data as &$vo) {
                 if (empty($return[$vo['level']])) {
-                    $return[$vo['level']] = [];
+                    $return[$vo['level']] = array();
                 }
                 array_push($return[$vo['level']], $vo);
             }
@@ -61,7 +61,7 @@
          */
         public function getDictionConfig() {
             $dictionary_data = $this->dictionary_model->getDictionaries();
-            $tempData = [];
+            $tempData = array();
             foreach ($dictionary_data as $value) {
                 $tempData[$value['id']] = $value['code'] . "-->" . $value['value'];
             }
@@ -76,7 +76,7 @@
          * @param $data
          * @return bool|mixed
          */
-        public function setDictionary($data = []) {
+        public function setDictionary($data = array()) {
             if (!$data['p_id']){
                 $insertData['level'] = 1;
             } else {
@@ -175,6 +175,7 @@
             if ($res['parent'] == 0) {
                 $res['p_name'] = "最高层";
             } else {
+                //这里更改了，暂时['value']
                 $res['p_name'] = $this->dictionary_model->getDictionary($res['parent'])['value'];
             }
             return $res;
@@ -184,7 +185,7 @@
          * @param array $data
          * @return bool|void
          */
-        public function saveDictionary($data=[]) {
+        public function saveDictionary($data=array()) {
             if (empty($data)) {
                 return ;
             }
