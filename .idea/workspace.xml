@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Home/Service/BaseService.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Home/Service/MessageService.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/index.php" afterPath="$PROJECT_DIR$/xyyb/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/adddictionary.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/addDictionary.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/editdictionary.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/editDictionary.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listindex.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,7 +17,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DictionaryController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DictionaryController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
@@ -32,12 +30,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/IndexController.class.php">
+      <file leaf-file-name="MessageService.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/MessageService.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseService.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/BaseService.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding>
+                <element signature="e#6#165#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,22 +102,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DictionaryModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2300">
-              <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DictionaryService.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="194" column="27" lean-forward="false" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="230">
+              <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+              <folding>
+                <element signature="e#10#183#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,12 +178,14 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listindex.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/editdictionary.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php" />
-        <option value="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showlist.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ThinkPHP/ThinkPHP.php" />
         <option value="$PROJECT_DIR$/xyyb/index.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Service/BaseService.class.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Service/MessageService.class.php" />
       </list>
     </option>
   </component>
@@ -193,8 +197,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="231" />
-    <option name="y" value="51" />
+    <option name="x" value="92" />
     <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
@@ -492,15 +495,15 @@
       <workItem from="1519729509961" duration="591000" />
       <workItem from="1519980696394" duration="1331000" />
       <workItem from="1520061008606" duration="90000" />
-      <workItem from="1520061232481" duration="1886000" />
+      <workItem from="1520061232481" duration="2821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91411000" />
+    <option name="totallyTimeSpent" value="92346000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="231" y="51" width="1370" height="744" extended-state="0" />
+    <frame x="92" y="0" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17633587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -535,8 +538,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/index.html" />
-    <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/user-add.html" />
     <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/member-add.html" />
     <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/picture-add.html" />
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
@@ -820,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="194" column="27" lean-forward="false" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -844,6 +837,34 @@
             <element signature="e#6#126#0#PHP" expanded="true" />
             <element signature="e#154#185#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/BaseService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="e#6#165#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding>
+            <element signature="e#10#183#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/MessageService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -8,7 +8,7 @@
      **/
     namespace Home\Service;
     use Home\Model\DictionaryModel;
-    class DictionaryService
+    class DictionaryService extends BaseService
     {
         protected $dictionary_model = null;
         protected $dictionary_config = null;
