@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d216779-be1e-4b8f-b7e3-a397b6a8964b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
-    </list>
+    <list default="true" id="8d216779-be1e-4b8f-b7e3-a397b6a8964b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,68 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="309" column="36" lean-forward="false" selection-start-line="309" selection-start-column="36" selection-end-line="309" selection-end-column="36" />
-              <folding>
-                <element signature="e#6#104#0#PHP" expanded="true" />
-                <element signature="e#132#158#0#PHP" expanded="true" />
-                <marker date="1520151043342" expanded="true" signature="4702:4722" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="4818:4826" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="4845:4865" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="5052:5060" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="5079:5099" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="5222:5230" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="6399:6419" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="6515:6523" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="6542:6562" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="6745:6753" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="6772:6792" ph="..." />
-                <marker date="1520151043342" expanded="true" signature="6911:6919" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="197" column="41" lean-forward="false" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showlist.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="212" column="34" lean-forward="false" selection-start-line="212" selection-start-column="34" selection-end-line="212" selection-end-column="34" />
-              <folding>
-                <marker date="1520151899188" expanded="true" signature="4506:4526" ph="..." />
-                <marker date="1520151899188" expanded="true" signature="4616:4624" ph="..." />
-                <marker date="1520151899188" expanded="true" signature="5018:5038" ph="..." />
-                <marker date="1520151899188" expanded="true" signature="5127:5135" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edituser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="163" column="45" lean-forward="false" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -166,16 +100,15 @@
       <updated>1520073668721</updated>
       <workItem from="1520076177212" duration="34000" />
       <workItem from="1520086657658" duration="884000" />
-      <workItem from="1520137509976" duration="12256000" />
+      <workItem from="1520137509976" duration="12475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13174000" />
+    <option name="totallyTimeSpent" value="13393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -370,14 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="163" column="45" lean-forward="false" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -388,14 +313,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="212" column="34" lean-forward="false" selection-start-line="212" selection-start-column="34" selection-end-line="212" selection-end-column="34" />
+        <state relative-caret-position="59">
+          <caret line="196" column="16" lean-forward="true" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
           <folding>
             <marker date="1520151899188" expanded="true" signature="4506:4526" ph="..." />
             <marker date="1520151899188" expanded="true" signature="4616:4624" ph="..." />
             <marker date="1520151899188" expanded="true" signature="5018:5038" ph="..." />
             <marker date="1520151899188" expanded="true" signature="5127:5135" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="163" column="45" lean-forward="false" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
