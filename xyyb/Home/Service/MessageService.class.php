@@ -7,7 +7,14 @@
  * function: 消息的数据处理部分
  **/
 namespace Home\Service;
+use Home\Model\MessageModel;
 class MessageService extends  BaseService {
+    protected $message_model = null;
+    public function __construct()
+    {
+        $this->message_model = new MessageModel();
+    }
+
     /**
      * 查询获取消息
      */
@@ -15,6 +22,6 @@ class MessageService extends  BaseService {
         /**
          * 筛选条件
          */
-
+        return $this->message_model->getMessages($data);
     }
 }

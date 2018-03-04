@@ -7,8 +7,19 @@
  */
 
 namespace Home\Controller;
+use Home\Service\MessageService;
 class MessageController extends BackendController {
+    protected $message_service = null;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->message_service = new MessageService();
+    }
+
     public function showList() {
+        $data = $this->message_service->getMessages();
+        var_dump($data);
+        $this->assign("list_data", $data);
         $this->display();
     }
 }
