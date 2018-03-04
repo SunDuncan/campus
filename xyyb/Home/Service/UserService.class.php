@@ -199,5 +199,10 @@ public function firstDel($data,$res)
       return $res;
   }
 
+  public function deleteMany($data){
+
+    return $this->userModel->where($data)->delete();
+  }
+
 
 }

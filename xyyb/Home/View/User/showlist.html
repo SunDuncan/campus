@@ -8,7 +8,7 @@
         <input type="text" name="" id="" placeholder=" 字典值" style="width:120px" class="input-text">
         <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
     </div>
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="dictionary_add('添加字典','{:U('Dictionary/index')}', '', '510')", href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加字典</a></span> <span class="r">共有数据：<strong>54</strong> 条
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="delete_all()"  class="btn btn-danger radius"><i class="Hui-iconfont" >&#xe6e2;</i> 批量删除</a>
                                             </span>
     </div>
     <div class="mt-20">
@@ -41,7 +41,28 @@
 <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}laypage/1.2/laypage.js"></script>
+
 <script type="text/javascript">
+
+    var checkObj={};
+    /*
+    这里 $(':checkbox').click这样写不起作用
+    */
+
+function sy(id){
+    if (id in checkObj){
+        delete checkObj[id];
+    }
+    else {
+        checkObj[id]=id;
+    }
+}
+
+
+
+
+
+
 
     $('.table-sort').dataTable({
         "aaSorting": [[ 1, "desc" ]],//默认第几个排序
@@ -58,6 +79,8 @@
     });
 
     function retrieveData(url, aoData, fnCallback) {
+        //var ch=document.getElementsByName('ck');
+
         $.ajax({
             url: url,//这个就是请求地址对应sAjaxSource
             data : {
@@ -165,6 +188,56 @@
         layer.full(index);
       */
     }
+    /*
+       批量删除
+    */
+
+    function delete_all()
+    {
+        $.ajax({
+            url:"{:U('User/deleteMany')}",
+            type:'POST',
+            data:{'inform':JSON.stringify(checkObj)},
+            success:function(data){
+               if (data) {
+                   layer.msg('删除成功',{icon:1},function(){
+                       $('.table-sort').dataTable().fnDraw(true);
+                   });
+               }
+               else {
+                   layer.msg('操作不成功',{icon:2},function(){
+                   });
+               }
+                //console.log(data);
+            },
+            error:function(h,x,t){
+                layer.msg(x,{icon:2},function(){
+                })
+                //console.log(x);
+            }
+        });
+
+         //console.log(checkObj);
+         //console.log(checkBox);
+       // alert(checkBox);
+    //     if(checkBox.checked){
+     //        alert(checkBox.val());
+      //   }
+
+    }
+
+function getCheckBoxValue(){
+    var checkBox=document.getElementsByName('ck');
+    var i=0;
+    for(;i<checkBox.length;i++)
+    {
+        if (checkBox[i].checked) {
+            checkObj.cB.push(checkBox[i].value);
+        }
+    }
+}
+
+
 
 
     /*图片-删除*/
