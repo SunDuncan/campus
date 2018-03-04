@@ -194,28 +194,36 @@ function sy(id){
 
     function delete_all()
     {
-        $.ajax({
-            url:"{:U('User/deleteMany')}",
-            type:'POST',
-            data:{'inform':JSON.stringify(checkObj)},
-            success:function(data){
-               if (data) {
-                   layer.msg('删除成功',{icon:1},function(){
-                       $('.table-sort').dataTable().fnDraw(true);
-                   });
-               }
-               else {
-                   layer.msg('操作不成功',{icon:2},function(){
-                   });
-               }
-                //console.log(data);
-            },
-            error:function(h,x,t){
-                layer.msg(x,{icon:2},function(){
-                })
-                //console.log(x);
-            }
-        });
+          if (JSON.stringify(checkObj)=='{}'){
+              layer.msg('请选择要删除的用户', {icon: 2}, function () {
+              });
+              return ;
+          }
+
+            $.ajax({
+                url: "{:U('User/deleteMany')}",
+                type: 'POST',
+                dataType:'json',
+                data: {'inform': JSON.stringify(checkObj)},
+                success: function (data) {
+
+                    if (data) {
+                        layer.msg('删除成功', {icon: 1}, function () {
+                            $('.table-sort').dataTable().fnDraw(true);
+                        });
+                    }
+                    else {
+                        layer.msg('操作不成功', {icon: 2}, function () {
+                        });
+                    }
+                    //console.log(data);
+                },
+                error: function (h, x, t) {
+                    layer.msg(x, {icon: 2}, function () {
+                    })
+                    //console.log(x);
+                }
+            });
 
          //console.log(checkObj);
          //console.log(checkBox);

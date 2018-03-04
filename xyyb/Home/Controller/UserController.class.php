@@ -296,19 +296,25 @@ class UserController extends BackendController {
 
        $da=I('post.inform');
        $da=json_decode($da);
-       $data=array();
-       foreach ($da as $key => $value){
-           $data[]=$value;
+       if (empty($data)) {
+           echo json_encode(false);
+       }
+       else {
+           $data=array();
+           foreach ($da as $key => $value){
+               $data[]=$value;
+           }
+
+           $bs['id']=array('in',$data);
+           $flag=$this->userService->deleteMany($bs);
+           if($flag){
+               echo  json_encode(true);
+           }
+           else {
+               echo json_encode(false);
+           }
        }
 
-       $bs['id']=array('in',$data);
-        $flag=$this->userService->deleteMany($bs);
-        if($flag){
-            echo  json_encode(true);
-        }
-        else {
-            echo json_encode(false);
-        }
     }
 
 
