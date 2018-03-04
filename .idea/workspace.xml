@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d216779-be1e-4b8f-b7e3-a397b6a8964b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
-    </list>
+    <list default="true" id="8d216779-be1e-4b8f-b7e3-a397b6a8964b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,68 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="298" column="26" lean-forward="true" selection-start-line="298" selection-start-column="26" selection-end-line="298" selection-end-column="26" />
-              <folding>
-                <element signature="e#6#104#0#PHP" expanded="true" />
-                <element signature="e#132#158#0#PHP" expanded="true" />
-                <marker date="1520154074733" expanded="true" signature="4702:4722" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="4818:4826" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="4845:4865" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="5052:5060" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="5079:5099" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="5222:5230" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="6399:6419" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="6515:6523" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="6542:6562" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="6745:6753" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="6772:6792" ph="..." />
-                <marker date="1520154074733" expanded="true" signature="6911:6919" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adduser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="107" column="47" lean-forward="true" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edituser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showlist.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="197" column="34" lean-forward="false" selection-start-line="197" selection-start-column="34" selection-end-line="197" selection-end-column="34" />
-              <folding>
-                <marker date="1520154433330" expanded="true" signature="4506:4526" ph="..." />
-                <marker date="1520154433330" expanded="true" signature="4616:4624" ph="..." />
-                <marker date="1520154433330" expanded="true" signature="5018:5038" ph="..." />
-                <marker date="1520154433330" expanded="true" signature="5127:5135" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -97,9 +33,10 @@
         <option value="$PROJECT_DIR$/../x.html" />
         <option value="$PROJECT_DIR$/../c.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/Service/UserService.class.php" />
-        <option value="$PROJECT_DIR$/../php/try.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
+        <option value="$PROJECT_DIR$/../php/try.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/Public/menu.html" />
       </list>
     </option>
   </component>
@@ -110,7 +47,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="148" />
     <option name="y" value="239" />
     <option name="width" value="1330" />
@@ -118,7 +55,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -131,12 +68,88 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ThinkPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Dictionary" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php/try.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -165,18 +178,17 @@
       <updated>1520073668721</updated>
       <workItem from="1520076177212" duration="34000" />
       <workItem from="1520086657658" duration="884000" />
-      <workItem from="1520137509976" duration="14739000" />
+      <workItem from="1520137509976" duration="20332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15657000" />
+    <option name="totallyTimeSpent" value="21250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -270,6 +282,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -331,10 +344,10 @@
         <state relative-caret-position="-6750">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1520154398637" expanded="true" signature="6925:6945" ph="..." />
-            <marker date="1520154398637" expanded="true" signature="7035:7043" ph="..." />
-            <marker date="1520154398637" expanded="true" signature="7437:7457" ph="..." />
-            <marker date="1520154398637" expanded="true" signature="7546:7554" ph="..." />
+            <marker date="1520154444615" expanded="true" signature="6925:6945" ph="..." />
+            <marker date="1520154444615" expanded="true" signature="7035:7043" ph="..." />
+            <marker date="1520154444615" expanded="true" signature="7437:7457" ph="..." />
+            <marker date="1520154444615" expanded="true" signature="7546:7554" ph="..." />
           </folding>
         </state>
       </provider>
@@ -343,30 +356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="197" column="41" lean-forward="false" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../php/try.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="107" column="47" lean-forward="true" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -394,16 +383,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="197" column="34" lean-forward="false" selection-start-line="197" selection-start-column="34" selection-end-line="197" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="107" column="47" lean-forward="true" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="103" column="11" lean-forward="true" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/showList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3600">
+          <caret line="141" column="42" lean-forward="true" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/editDictionary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3690">
+          <caret line="132" column="30" lean-forward="true" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="196" column="46" lean-forward="false" selection-start-line="196" selection-start-column="46" selection-end-line="196" selection-end-column="46" />
           <folding>
             <marker date="1520154433330" expanded="true" signature="4506:4526" ph="..." />
             <marker date="1520154433330" expanded="true" signature="4616:4624" ph="..." />
             <marker date="1520154433330" expanded="true" signature="5018:5038" ph="..." />
             <marker date="1520154433330" expanded="true" signature="5127:5135" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Public/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../php/try.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
