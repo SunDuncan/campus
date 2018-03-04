@@ -79,7 +79,9 @@ class Local{
         }
 
         /* 移动文件 */
-        if (!move_uploaded_file($file['tmp_name'], $filename)) {
+
+        if (!move_uploaded_file($file['tmp_name'],$filename)) {
+
             $this->error = '文件上传保存错误！';
             return false;
         }

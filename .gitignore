@@ -1,3 +1,7 @@
-*/Runtime/*
 */Runtime/
 .idea/*
+./uploads/*
+*/*.jpg
+*/*.png
+*/*.jpeg
+*/*.gif

@@ -44,6 +44,7 @@ class DictionaryModel extends Model {
         return  $this->where($map)->find();
     }
 
+
     public function countDictionary($data = []) {
         if (empty($data)) {
             return $this->count();

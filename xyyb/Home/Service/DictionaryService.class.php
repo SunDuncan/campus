@@ -17,6 +17,7 @@
             $this->dictionary_model = new DictionaryModel();
         }
 
+
         public function formatDictionary($data = []) {
             $dat = $this->dictionary_model->getDictionaries($data);
             $count = $this->dictionary_model->countDictionary($data);

@@ -22,6 +22,7 @@ class BackendController extends Controller
      */
     public function ajaxSuccess($data = '', $msg = '操作成功', $code = 200)
     {
+
         $return = [
             'code' => $code,
             'msg' => $msg,

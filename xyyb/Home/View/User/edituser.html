@@ -1,0 +1,343 @@
+<include file="Public:header"/>
+<script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}../h-ui/js/H-ui.js"></script>
+<title>添加用户 - 校园佣兵</title>
+</head>
+<body>
+
+
+<article class="page-container">
+
+
+   <form action="{:U('Home/User/changeUser')}" method="post" class="form form-horizontal" id="form-member-add" enctype="multipart/form-data">
+
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>用户名：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <input type="text" class="input-text" value="{$user.username}" placeholder="" id="username" name="username">
+           </div>
+       </div>
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>昵称：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <input type="text" class="input-text" value="{$user.nickname}" placeholder="" id="nickname" name="nickname">
+           </div>
+       </div>
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>性别：</label>
+           <div class="formControls col-xs-8 col-sm-9 skin-minimal">
+               <div class="radio-box">
+                   <input name="gender" type="radio" id="sex-1" value="0" >
+                   <label for="sex-1" >男</label>
+               </div>
+               <div class="radio-box">
+                   <input type="radio" id="sex-2" name="gender" value="1" >
+                   <label for="sex-2">女</label>
+               </div>
+               <div class="radio-box">
+                   <input type="radio" id="sex-3" name="gender" value="2">
+                   <label for="sex-3">保密</label>
+               </div>
+           </div>
+       </div>
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>出生日期：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <input type="date" class="input-text" value="{$user.birthday}" placeholder="" id="birthday" name="birthday">
+           </div>
+       </div>
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <input type="password" class="input-text" value="{$user.password}" placeholder="" id="password" name="password">
+           </div>
+       </div>
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <input type="text" class="input-text"  placeholder="" id="phoneNumber" name="phoneNumber" value="{$user['phonenumber']}" />
+
+           </div>
+       </div>
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <input type="text" class="input-text" placeholder="@" name="email" id="email" value="{$user.email}">
+           </div>
+       </div>
+       <div class="row cl" id="weiyi">
+           <label class="form-label col-xs-4 col-sm-3">附件：</label>
+
+           <div class="formControls col-xs-8 col-sm-9">
+               <span class="btn-upload form-group">
+               <input class="input-text upload-url" type="text"  value=""name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px" ><a href="javascript:void(0);" class="btn btn-primary radius upload-btn" ><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+               <input type="file" multiple name="files"  class="input-file" id="files"  >
+
+               </span>
+           </div>
+
+           <input type="hidden" value="{$user.id}" id="hide" name="id">
+       </div>
+       <div class="row cl">
+           <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+               <button type="button" style="height:25px;width:60px" style="position:relative;left:800px;" onclick="picture_look('http://localhost/campus/xyyb/index.php/Home/User/showUserPicture')">预览</button>
+           </div>
+       </div>
+
+
+       <div class="row cl">
+           <label class="form-label col-xs-4 col-sm-3">个性签名：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <textarea name="desc" cols="" rows=""  id="beizhu" class="textarea"  placeholder="写出属于你的个性签名" onkeyup="$('#beizhu').Huitextarealength({
+   minlength:4,
+   maxlength:100
+});"  >{$user.desc}</textarea>
+               <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+           </div>
+       </div>
+       <div class="row cl">
+           <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+               <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;确认修改&nbsp;&nbsp;">
+           </div>
+       </div>
+
+    </form>
+</article>
+
+<!-- 为什么这里footer之中引用的脚本不能使用-->
+<include file="Public:footer" />
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="{$Think.const.HUI_JS_URL}H-ui.min.js"></script>
+    <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}layer/2.4/layer.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            var gender="{$user.gender}";
+
+            if (gender ==0) {
+                $('#sex-1').attr('checked','checked');
+            }
+            if (gender == 1) {
+
+                $('#sex-2').attr('checked','checked');
+            }
+            if(gender ==2) {
+                $('#sex-3').attr('checked','checked');
+            }
+
+            $("#form-member-add").validate({
+                rules:{
+                    username:{
+                        required:true,
+                        minlength:2,
+                        maxlength:16
+                    },
+                    gender:{
+                         required:true,
+                    },
+                    phoneNumber:{
+                        required:true,
+                        isMobile:true,
+                    },
+                    email:{
+                        required:true,
+                        email:true,
+                    },
+                    nickname:{
+                        required:true,
+                    },
+                    password:{
+                        required:true,
+                        rangelength:[6,13],
+                    },
+                    desc:{
+                        required:true,
+                    },
+
+                },
+                onkeyup:false,
+                focusCleanup:true,
+                success:"valid",
+                submitHandler:function(form){
+                    $(form).ajaxSubmit(
+                        {
+                            success:function(data){
+                               if (data.flag){
+                                   layer.msg(data.information,{icon:1},function(){
+                                       parent.location.reload(); // 父页面刷新
+                                       var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                                       parent.layer.close(index);
+                                   });
+
+                                   /*
+                                   alert(data.information);
+                                   parent.location.reload();
+                                   var index = parent.layer.getFrameIndex(window.name);
+                                   parent.layer.close(index);
+                                   console.log(window.parent.location.href);
+                                  */
+                                }
+                               else {
+
+                                   layer.msg(data.information,{icon:1},function(){
+                                       window.location.reload(); // 父页面刷新
+
+                                   });
+
+                               }
+
+                            }
+                        }
+                    );
+                   //layer.close(layer.index);
+                    //var index = parent.layer.getFrameIndex(window.name);
+                    //console.log(form);
+                    //parent.layer.close(index);
+
+                   // console.log(d[0].value);
+
+/*
+                     var b=$(form).serializeArray();
+                     var c=transferInformation(b);
+
+                     $.ajax(
+                         {
+                             type:form.method,
+                             url:form.action,
+                             data:{'zhi':JSON.stringify(c)},
+                             //dataType:'JSON',
+                             success:function(data){
+                                 console.log(data);
+                                 //alert(data);
+                                 return ;
+                                if (data ==0) {
+                                    alert('出错了，上传不成功');
+                                }
+                                 else if (data == 1) {
+                                    alert ('修改成功');
+                                }
+                                else {
+                                    alert('上传文件出错了');
+                                }
+
+                             },
+                             error:function(x,h,c){
+                                 //alert(x);
+                                 console.log(h);
+                             }
+
+                         }
+                     );
+*/
+
+                     //console.log(c.__proto__);
+                     //console.log(form.action);
+                     //console.log(form.method);
+                    //console.log(form.valueOf());
+
+
+
+                    //$(form).ajaxSubmit();
+                    //form.submit();
+                    //var index = parent.layer.getFrameIndex(window.name);
+                    // alert("hello");
+                    //parent.$('.btn-refresh').click();
+                    // parent.layer.close(index);
+                }
+            });
+
+
+
+
+        });
+       function transferInformation(data){
+           var i=0;
+           var toData={};
+           for(;i<data.length;i++){
+              toData[data[i].name]=data[i].value;
+           }
+          return toData;
+       }
+
+
+
+
+
+        function picture_look(url)
+        {
+            if ($('#uploadfile').val()=='') {
+                url=url+'/id'+'/'+$('#hide').val();
+                var index = layer.open({
+                    type: 2,
+                    title: '图片',
+                    content: url
+                });
+            }
+            else {
+
+                var index = layer.open({
+                    maxmin:true,
+                    type: 2,
+                    title: '图片',
+                    content: fc.url
+                });
+                layer.full(index);
+            }
+
+        }
+          var fc=function(){
+              this.a='a';
+          };
+
+
+
+        $('#files').change(function(event){
+                                   var files=event.target.files;
+                                   if (files && files.length>0 )
+                                   {
+                                        var file=files[0];
+                                       if (file.size >1024*1024*2) {
+                                            alert('图片大小不能超过2M');
+                                            return false;
+                                       }
+                                       else {
+                                            //alert('hello');
+                                            var URL=window.URL || window.webkitURL;
+                                            var imgURL = URL.createObjectURL(file);
+                                            fc.url=imgURL;
+
+                                       }
+                                   }
+                                   else {
+                                        alert('出现了错误');
+                                        return false;
+                                   }
+
+                                   //var file=files[0];
+                                   //console.log(file);
+                                }
+
+        );
+
+
+        // $(function(){
+            /*
+            $('.skin-minimal input').iCheck({
+                checkboxClass: 'icheckbox-blue',
+                radioClass: 'iradio-blue',
+                increaseArea: '20%'
+            });
+        */
+
+
+       // });
+
+    </script>
+
+
+    <!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>
