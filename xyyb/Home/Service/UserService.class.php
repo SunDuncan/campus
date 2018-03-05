@@ -238,8 +238,14 @@ public function firstDel($data,$res)
   }
 
   public function deleteMany($data){
-
-    return $this->userModel->where($data)->delete();
+     $res=$this->userModel->where($data)->select();
+     foreach ($res as $key){
+         unlink($key['avatar']);
+         $temp=explode('/',$key['avatar']);
+         $dir=$temp[0].'/'.$temp[1].'/'.$temp[2];
+         rmdir($dir);
+     }
+     return $this->userModel->where($data)->delete();
   }
 
   //新建立函数

@@ -336,7 +336,7 @@ function sy(id){
             $.ajax({
                 url: "{:U('User/deleteMany')}",
                 type: 'POST',
-                dataType:'json',
+               // dataType:'json',
                 data: {'inform': JSON.stringify(checkObj)},
                 success: function (data) {
                     if (data) {
@@ -388,15 +388,16 @@ function getCheckBoxValue(){
             $.ajax({
                 type: 'POST',
                 url: '{:U(\'User/deleteUser\')}',
-                dataType: 'json',
+                //dataType: 'json',
                 data:{
                     "id":JSON.stringify(id),
                 },
                 success: function(data){
                     if(data) {
-                             //alert(id);
+                        layer.msg('删除成功',{icon:1},function(){
+
+                        });
                         location.replace(location.href);
-                             //  $('.table-sort').dataTable().fnDraw(true);
                     }
                     else {
                         layer.msg('删除不成功',{icon:2},function(){
@@ -406,7 +407,7 @@ function getCheckBoxValue(){
                     }
                 }  ,
                 error:function(data) {
-                    //alert(data);
+
                     console.log(data.msg);
                 },
 

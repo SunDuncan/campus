@@ -260,7 +260,7 @@ class UserController extends BackendController {
 
 
 
-
+*/
     public function deleteUser()
     {
         $data['id']=I('post.id');
@@ -277,7 +277,7 @@ class UserController extends BackendController {
             echo  json_encode(false);
         }
     }
-*/
+
     public function editUser()
     {
         $data['id']=I('get.id');
