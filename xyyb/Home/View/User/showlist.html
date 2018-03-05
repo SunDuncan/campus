@@ -3,10 +3,16 @@
 </head>
 <body>
 <div class="page-container">
-    <div class="text-c"> 日期范围：
-        <input type="text" name="" id="" placeholder=" 字典代码" style="width:120px" class="input-text">
-        <input type="text" name="" id="" placeholder=" 字典值" style="width:120px" class="input-text">
-        <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
+    <div class="text-c"> 搜索类型：
+        <select  >
+            <option value="1">用户名</option>
+            <option value="2">昵称</option>
+            <option value="3">手机号码</option>
+            <option value="4">电子邮箱</option>
+        </select>
+       <!-- <input type="text" name="" id="ty" placeholder=" 搜索类型" style="width:120px" class="input-text"> -->
+        <input type="text" name="" id="tv" placeholder=" 搜索值" style="width:120px" class="input-text">
+        <button name="" id="" class="btn btn-success" type="button" onclick="searchByType()"><i class="Hui-iconfont">&#xe665;</i> 搜索用户</button>
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="delete_all()"  class="btn btn-danger radius"><i class="Hui-iconfont" >&#xe6e2;</i> 批量删除</a>
                                             </span>
@@ -17,7 +23,7 @@
           <thead>
           <tr class="text-c">
               <th width="40"><input name="" type="checkbox" value=""></th>
-              <th width="80">ID</th>
+              <th width="80">序号</th>
               <th width="100">用户名称</th>
               <th width="100">用户昵称</th>
               <th width="150">手机号码</th>
@@ -28,7 +34,6 @@
           </tr>
           </thead>
           <tbody>
-
           </tbody>
 
       </table>
@@ -59,24 +64,50 @@ function sy(id){
 }
 
 
+$('#tv').change(function(){
+     if($(this).val() == '') {
+        table.fnDestroy();
+         $('.table-sort').dataTable({
+             "aaSorting": [[ 1, "desc" ]],//默认第几个排序
+             "bStateSave": true,//状态保存
+             "aoColumnDefs": [
+                 //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                 {"orderable":false,"aTargets":0,
+                     "bSortable":false,
+
+                 }// 制定列不参与排序
+             ],
+
+             "bPaginate":true,
+             "bServerSide": true,
+             "sAjaxSource": "fenyesearch",//这个是请求的地址
+             "fnServerData": retrieveData,// 获取数据的处理函数
+
+         });
+     }
+});
 
 
 
 
-
-    $('.table-sort').dataTable({
+   var table= $('.table-sort').dataTable({
         "aaSorting": [[ 1, "desc" ]],//默认第几个排序
         "bStateSave": true,//状态保存
         "aoColumnDefs": [
             //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-            {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+            {"orderable":false,"aTargets":0,
+             "bSortable":false,
+
+            }// 制定列不参与排序
         ],
+
          "bPaginate":true,
         "bServerSide": true,
         "sAjaxSource": "fenyesearch",//这个是请求的地址
         "fnServerData": retrieveData,// 获取数据的处理函数
 
     });
+
 
     function retrieveData(url, aoData, fnCallback) {
         //var ch=document.getElementsByName('ck');
@@ -102,6 +133,51 @@ function sy(id){
         });
     }
 
+
+    function searchByType(){
+        table.fnDestroy();
+       table= $('.table-sort').dataTable({
+            "aaSorting": [[ 1, "desc" ]],//默认第几个排序
+            "bStateSave": true,//状态保存
+            "aoColumnDefs": [
+                //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+            ],
+            "bPaginate":true,
+            "bServerSide": true,
+            "sAjaxSource": "searchByType",//这个是请求的地址
+            "fnServerData": retrieve,// 获取数据的处理函数
+
+        });
+    }
+
+    function retrieve(url, aoData, fnCallback) {
+        //var ch=document.getElementsByName('ck');
+          search={};
+          search.type=$('select').val();
+          search.value=$('#tv').val();
+        $.ajax({
+            url: url,//这个就是请求地址对应sAjaxSource
+            data : {
+                "aoData":JSON.stringify(aoData),
+                "own":JSON.stringify(search)
+            },
+            type: 'POST',
+            dataType: 'json',
+            async: true,
+            success: function (result) {
+
+                 fnCallback(result);//把返回的数据传给这个方法就可以了,datatable会自动绑定数据的
+
+
+
+            },
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("status:"+XMLHttpRequest.status+",readyState:"+XMLHttpRequest.readyState+",textStatus:"+textStatus);
+
+            }
+        });
+    }
 
 
     /*图片-查看*/

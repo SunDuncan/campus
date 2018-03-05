@@ -107,6 +107,42 @@ class UserService
          return false;
      }
   }
+
+  public function searchByType($data){
+
+
+      $da=array();
+    if(empty($data)) {
+        return false;
+    }
+
+
+      if ($data['type'] ==1) {
+          $da['username']=array("like","%".$data['value']."%");
+
+      }
+      if ($data['type'] ==2) {
+          $da['nickname']=array("like","%".$data['value']."%");
+
+      }
+      if ($data['type'] ==3) {
+          $da['phoneNumber']=array("like","%".$data['value']."%");
+
+      }
+      if ($data['type'] ==4) {
+          $da['email']=array("like","%".$data['value']."%");
+
+      }
+      $res=$this->userModel->where($da)->select();
+      if ($res) {
+          return $res;
+      }
+      else {
+          return false;
+      }
+
+  }
+
   /*
    * 删除用户
    */
