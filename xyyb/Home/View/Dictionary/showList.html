@@ -4,9 +4,9 @@
 <body>
 <div class="page-container">
     <div class="text-c">
-        <input type="text" name="code" id="code" placeholder=" 字典代码" style="width:120px" class="input-text">
-        <input type="text" name="value" id="value" placeholder=" 字典值" style="width:120px" class="input-text">
-        <input type="text" name="level" id="level" placeholder="层级" style="width:120px" class="input-text">
+        <input type="text" name="code" id="code" placeholder=" 字典代码" style="width:120px" class="input-text"  <notempty name="Think.get.code">value="{$_GET['code']}"</notempty>>
+        <input type="text" name="value" id="value" placeholder=" 字典值" style="width:120px" class="input-text"  <notempty name="Think.get.value">value="{$_GET['value']}"</notempty>>
+        <input type="number" name="level" id="level" placeholder="层级" style="width:120px" class="input-text" <notempty name="Think.get.level">value="{$_GET['level']}"</notempty>>
         <button name="check" id="d_check" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜字典</button>
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="delAll()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="dictionary_add('添加字典','{:U('Dictionary/index')}', '', '450')", href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加字典</a></span> <span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
@@ -36,7 +36,7 @@
                 <td>{$vo['level']}</td>
                 <td>{$vo['createtime']}</td>
                 <td class="td-status"><eq name="vo.isactive" value="1"><span class="label label-success radius">已发布</span><else/><span class="btn btn-danger radius">已删除</span></eq></td>
-                <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="dictionary_edit('字典编辑','{:U('Dictionary/editdictionary', [id=>$vo['id']])}', '', '450')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="delDictionary({$vo['id']})" href="javascript:;" title="删除" ><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="dictionary_edit('字典编辑','{:U('Dictionary/editDictionary', [id=>$vo['id']])}', '', '450')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="delDictionary({$vo['id']})" href="javascript:;" title="删除" ><i class="Hui-iconfont">&#xe6e2;</i></a></td>
             </tr>
             </foreach>
             </tbody>
@@ -145,6 +145,37 @@
                 });
             });
         }
+
+    $("#d_check").click(function () {
+        var code = $("#code").val();
+        var value = $("#value").val();
+        var level = $("#level").val();
+        var data = {};
+        if (code !== undefined && code.length != 0) {
+            data['code'] = code;
+        }
+
+        if (value !== undefined && value.length != 0) {
+            data['value'] = value;
+        }
+
+        if (level !== undefined && level.length != 0) {
+            data['level'] = level;
+        }
+        getConditionDictionary(data);
+    })
+    /**
+     * 条件查询字典的值
+     */
+    function getConditionDictionary(data) {
+        var base_url = ("{:U('dictionary/showList')}").replace(/\.html/, '');
+        if (data.length != 0) {
+            for(var key in data) {
+                base_url += "/" + key + "/" + data[key];
+            }
+        }
+        location.href = base_url;
+    }
 </script>
 </body>
 </html>
