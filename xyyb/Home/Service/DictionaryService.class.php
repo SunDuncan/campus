@@ -19,7 +19,9 @@
 
 
         public function formatDictionary($data = []) {
+            //获取全部数据
             $dat = $this->dictionary_model->getDictionaries($data);
+            //返回符合条件的记录数目
             $count = $this->dictionary_model->countDictionary($data);
             $this->dictionary_config = $this->getDictionConfig();
             $return['count'] = $count;

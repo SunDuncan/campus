@@ -27,7 +27,16 @@ class UserController extends BackendController {
     }
 
     public function showList() {
-         $this->display();
+        $end_min_date = '#F{$dp.$D(' . '\\' . '\'logmin' . '\\' . '\'' . ')}';
+        $start_max_date = '#F{$dp.$D(' . '\\' . '\'logmax' . '\\' . '\')||' . '\\' . '\'%y-%M-%d' . '\\' . '\'}';
+        $data = I('get.') ? I("get.") : [];
+        $rn=$this->userService->getResult($data);
+        $this->assign('list', $rn['data']);
+        $this->assign('count', $rn['count']);
+        $this->assign('START_MAX_DATE', $start_max_date);
+        $this->assign('END_MIN_DATE', $end_min_date);
+        $this->display();
+
     }
 
     public function insertUser()
@@ -87,68 +96,9 @@ class UserController extends BackendController {
 
 
         }
-
-/*
-        //$isHaveUser = $this->userService->checkUser($data);
-
-        if ($isHaveUser) {
-            //表示用户的昵称不重复
-            //接下来的话，就是准备验证上传的图片了
-            $upload = new \Think\Upload();// 实例化上传类
-            $upload->maxSize = 3145728;// 设置附件上传大小
-            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-            $upload->rootPath = './Uploads/'; // 设置附件上传根目录
-
-            $upload->subName = array('date','YmdHis');
-            $upload->savePath = '';
-            $upload->saveName =array('uniqid','');
-
-            // 上传文件
-            $info = $upload->upload();
-            if (!$info) {// 上传错误提示错误信息
-                $rn['flag']=false;
-                $rn['information']=$upload->getError();
-                $this->ajaxReturn($rn);
-
-                //$this->error($upload->getError());
-            } else {// 上传成功
-
-                $img_url = './uploads/' . '' . $info['files']['savepath'] . $info['files']['savename'];
-                $createTime = date('Y-m-d H:i:s', NOW_TIME);
-                $key = $this->userService->produceKey();
-                $data['key'] = $key;
-                $data['gender'] = (int)$data['sex'];
-                $data['avatar'] = $img_url;
-                $data['birthday'] = $data['birthday'] . " 00:00:00";
-                unset($data['sex']);
-                $data['desc'] = $data['beizhu'];
-                $data['password'] = $this->userService->cryptPassword($data['password'], $key);
-                $data['createTime'] = $createTime;
-                if ($this->userService->addUser($data)) {
-                    $rn['flag']=true;
-                    $rn['information']='用户添加成功';
-                    $this->ajaxReturn($rn);
-                    //$this->success('添加用户成功');
-                } else {
-                    $rn['flag']=false;
-                    $rn['information']='用户添加失败';
-                    $this->ajaxReturn($rn);
-                    //$this->error('添加失败');
-                }
-
-            }
-
-        } else {
-             $rn['flag']=false;
-             $rn['information']='用户添加失败';
-             $this->ajaxReturn($rn);
-            // $this->error('用户名已经存在,请刷新页面后再次输入');
-        }
-
-*/
     }
 
-
+/*
     public function searchByType(){
 
 
@@ -327,7 +277,7 @@ class UserController extends BackendController {
             echo  json_encode(false);
         }
     }
-
+*/
     public function editUser()
     {
         $data['id']=I('get.id');
@@ -422,8 +372,8 @@ class UserController extends BackendController {
     public function deleteMany(){
 
        $da=I('post.inform');
-       $da=json_decode($da);
-       if (empty($data)) {
+       $da=(array)json_decode($da);
+       if (empty($da)) {
            echo json_encode(false);
        }
        else {

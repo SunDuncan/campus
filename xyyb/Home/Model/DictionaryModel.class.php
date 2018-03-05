@@ -16,7 +16,7 @@ class DictionaryModel extends Model {
         $data['createTime'] = date('Y-m-j',time());
         return $this->add($data);
     }
-
+    //暂时这里还看不出来什么意思
     public function getDictionaries($data = []) {
         if (empty($data)) {
             return $this->order("isActive desc,createTime desc")->select();

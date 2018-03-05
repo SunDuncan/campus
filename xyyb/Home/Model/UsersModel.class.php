@@ -37,8 +37,31 @@ class UsersModel extends Model {
         parent::__construct($name, $tablePrefix, $connection);
     }
 
+    //获取全部的用户
+    public function getUsers($data=''){
+        if (empty($data)) {
+            return $this->order('id')->select();
+        }
+        else {
+            $map=$data;
+            return $this->where($map)->select();
+        }
 
+    }
 
+ //获取表格之中记录的数目
+    public function countUsers($data='')
+    {
+        if (empty($data)){
+            return $this->count();
+        }
+        else {
+            $map=$data;
+            return $this->where($map)->count();
+
+        }
+
+    }
 
 
 }

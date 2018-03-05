@@ -242,5 +242,14 @@ public function firstDel($data,$res)
     return $this->userModel->where($data)->delete();
   }
 
+  //新建立函数
+    //获取分页的数据
+    public function getResult($data='')
+    {
+        $rn['count']=$this->userModel->countUsers($data);
+        $rn['data']=$this->userModel->getUsers($data);
+        return $rn;
+    }
+
 
 }

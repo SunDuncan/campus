@@ -77,6 +77,7 @@ class DictionaryController extends BackendController {
      * @param $data
      * @return mixed
      */
+    //返回数据
     public function getDictionaries($data = []) {
         $dictionaries = $this->dictionaryService->formatDictionary($data);
         return $dictionaries;
