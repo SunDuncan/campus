@@ -21,6 +21,8 @@ class UserService
     */
    public function checkUser($data)
    {
+
+
        $User=M('Users');
 
 

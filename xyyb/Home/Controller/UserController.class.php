@@ -33,23 +33,63 @@ class UserController extends BackendController {
     public function insertUser()
     {
 
-        //首先查看的token是否符合
-
-        /*
-
-        if (!$this->userService->checkToken($_POST)) {
-            $rn['flag']=false;
-            $rn['information']='重复提交了';
-            $this->ajaxReturn($rn);
-            //$this->error('重复提交了， ');
-        }
-      */
 
         //首先的话，肯定就是查看是否有相同的用户名;
         $data = I('post.');
 
+        $user=D('Users');
+        if (! $user->create($_POST,1)){
+            $rn['flag']=false;
+            $rn['information']=$user->getError();
+            $this->ajaxReturn($rn);
+             //var_dump($user->getError());
+        }
+        else {
+            $upload = new \Think\Upload();// 实例化上传类
+            $upload->maxSize = 3145728;// 设置附件上传大小
+            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+            $upload->rootPath = './Uploads/'; // 设置附件上传根目录
 
-        $isHaveUser = $this->userService->checkUser($data);
+            $upload->subName = array('date','YmdHis');
+            $upload->savePath = '';
+            $upload->saveName =array('uniqid','');
+
+            // 上传文件
+            $info = $upload->upload();
+            if (!$info) {// 上传错误提示错误信息
+                $rn['flag']=false;
+                $rn['information']=$upload->getError();
+                $this->ajaxReturn($rn);
+            } else {// 上传成功
+
+                $img_url = './uploads/' . '' . $info['files']['savepath'] . $info['files']['savename'];
+                $createTime = date('Y-m-d H:i:s', NOW_TIME);
+                $key = $this->userService->produceKey();
+                $user->key=$key;
+                $user->avatar=$img_url;
+                $user->createTime=$createTime;
+                $user->password=$this->userService->cryptPassword($user->password,$key);
+                $ds=$user->add();
+                $dc=array();
+               if ($ds) {
+                   $rn['flag']=true;
+                   $rn['information']="用户添加成功";
+                   $this->ajaxReturn($rn);
+               }
+               else {
+                   $rn['flag']=false;
+                   $rn['imformation']="用户添加失败";
+                   $this->ajaxReturn($rn);
+               }
+
+
+            }
+
+
+        }
+
+/*
+        //$isHaveUser = $this->userService->checkUser($data);
 
         if ($isHaveUser) {
             //表示用户的昵称不重复
@@ -105,6 +145,7 @@ class UserController extends BackendController {
             // $this->error('用户名已经存在,请刷新页面后再次输入');
         }
 
+*/
     }
 
 
