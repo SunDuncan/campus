@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+            <state relative-caret-position="23">
+              <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -111,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listIndex.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="listIndex.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-851">
-              <caret line="8" column="135" lean-forward="false" selection-start-line="8" selection-start-column="135" selection-end-line="8" selection-end-column="135" />
+            <state relative-caret-position="23">
+              <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -241,8 +241,8 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showList.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/xyyb/index.php" />
-        <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
       </list>
     </option>
   </component>
@@ -552,12 +552,12 @@
       <workItem from="1520064506577" duration="5176000" />
       <workItem from="1520160086563" duration="833000" />
       <workItem from="1520212182902" duration="8201000" />
-      <workItem from="1520296809208" duration="1283000" />
+      <workItem from="1520296809208" duration="1447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108149000" />
+    <option name="totallyTimeSpent" value="108313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1001,18 +1001,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-851">
-          <caret line="8" column="135" lean-forward="false" selection-start-line="8" selection-start-column="135" selection-end-line="8" selection-end-column="135" />
+        <state relative-caret-position="23">
+          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html">
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        <state relative-caret-position="23">
+          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding />
         </state>
       </provider>
