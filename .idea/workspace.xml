@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/images/demo-1-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/images/login_ico.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Base/Conf/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Base/Controller/BaseUserController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Base/Model/UserModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Base/View/BaseUser/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/css/component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/js/EasePack.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/js/TweenLite.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/js/demo-1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xyyb/Public/js/rAF.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/index.php" afterPath="$PROJECT_DIR$/xyyb/index.php" />
-    </list>
+    <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +17,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
               <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -54,18 +48,6 @@
             <state relative-caret-position="69">
               <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseUserController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Base/Controller/BaseUserController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding>
-                <element signature="e#6#118#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -110,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Base/Model/UserModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#6#123#0#PHP" expanded="true" />
               </folding>
@@ -180,7 +162,6 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Message/showList.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/Controller/DictionaryController.class.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/showList.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
         <option value="$PROJECT_DIR$/xyyb/Base/Conf/config.php" />
@@ -189,6 +170,7 @@
         <option value="$PROJECT_DIR$/xyyb/Base/View/BaseUser/login.html" />
         <option value="$PROJECT_DIR$/xyyb/Public/css/component.css" />
         <option value="$PROJECT_DIR$/xyyb/Base/Model/UserModel.class.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -624,12 +606,12 @@
       <workItem from="1520160086563" duration="833000" />
       <workItem from="1520212182902" duration="8201000" />
       <workItem from="1520296809208" duration="3733000" />
-      <workItem from="1520321316208" duration="1479000" />
+      <workItem from="1520321316208" duration="1526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112078000" />
+    <option name="totallyTimeSpent" value="112125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -886,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1032,10 +1006,18 @@
     <entry file="file://$PROJECT_DIR$/xyyb/Base/Model/UserModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#6#123#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
