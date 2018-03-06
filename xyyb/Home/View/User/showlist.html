@@ -9,7 +9,7 @@
         <button name="check" id="d_check" class="btn btn-success" type="submit" ><i class="Hui-iconfont">&#xe665;</i> 搜索用户</button>
     </div>
 
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="delete_all()"  class="btn btn-danger radius"><i class="Hui-iconfont" >&#xe6e2;</i> 批量删除</a>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onClick="delete_all()"  class="btn btn-danger radius"><i class="Hui-iconfont" >&#xe6e2;</i> 批量删除</a>
                                             </span>
     </div>
     <div class="mt-20">
@@ -17,7 +17,7 @@
 
           <thead>
           <tr class="text-c">
-              <th width="40"><input name="" type="checkbox" value="" onclick="sy('{$vo[\'id\']}')"></th>
+              <th width="40"><input name="" type="checkbox" value="" onClick="sy('{$vo[\'id\']}')"></th>
               <th width="80">序号</th>
               <th width="100">用户名称</th>
               <th width="100">用户昵称</th>
@@ -31,7 +31,7 @@
           <tbody>
           <foreach name="list" item="vo" key="k">
               <tr class="text-c">
-                  <td><input name="array_ids" type="checkbox" value="" onclick="sy('{$vo[\'id\']}')"></td>
+                  <td><input name="array_ids" type="checkbox" value="" onClick="sy('{$vo[\'id\']}')"></td>
                   <td>{$k + 1}</td>
                   <td>{$vo['username']}</td>
                   <td class="text-c">{$vo['nickname']}</td>
@@ -39,7 +39,7 @@
                   <td>{$vo['email']}</td>
                   <td>{$vo['createtime']}</td>
                   <td class="td-status"><eq name="vo.isactive" value="1"><span class="label label-success radius">已发布</span><else/><span class="btn btn-danger radius">已删除</span></eq></td>
-                  <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="user_edit('用户编辑','{:U(\'User/editUser\',[id=>$vo[\'id\']])}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'{$vo[\'id\']}')" href="javascript:;" title="删除" ><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                  <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="user_edit('用户编辑','{:U(\'User/edituser\',[id=>$vo[\'id\']])}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'{$vo[\'id\']}')" href="javascript:;" title="删除" ><i class="Hui-iconfont">&#xe6e2;</i></a></td>
               </tr>
           </foreach>
           </tbody>
@@ -95,7 +95,7 @@ function sy(id){
         getConditionDictionary(data);
     })
     function getConditionDictionary(data) {
-        var base_url = ("{:U('User/showList')}").replace(/\.html/, '');
+        var base_url = ("{:U('User/showlist')}").replace(/\.html/, '');
         if (data.length != 0) {
             for(var key in data) {
                 base_url += "/" + key + "/" + data[key];
@@ -109,14 +109,14 @@ function sy(id){
         var b=$('#ty').val();
         if (a==''&&b==''){
 
-            location.href="{:U('User/showList')}";
+            location.href="{:U('User/showlist')}";
         }
     });
     $('#ty').change(function(){
         var a=$(this).val();
         var b=$('#tv').val();
         if (a==''&&b==''){
-            location.href="{:U('User/showList')}";
+            location.href="{:U('User/showlist')}";
         }
     });
 

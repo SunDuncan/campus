@@ -23,7 +23,7 @@ class UsersModel extends Model {
         array('username','require',"必须输入用户名",1,'',1),
         array('nickname','require','必须输入用户的昵称',1,'',1),
         array('password','require','必须输入密码',1,'',1),
-        array('password','5,16','密码的长度不正确',1,'length',1),
+        array('password','3,100','密码的长度不正确',1,'length',1),
         array('phoneNumber','5,13','电话的长度不正确',2,'length',1),
         array('checkPassword','require','必须输入验证密码',1,'',1),
         array('checkPassword','password','输入的验证密码不正确',1,'confirm',1),
