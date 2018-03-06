@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xyyb/.htaccess" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,18 +18,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="450">
+              <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showlist.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="showlist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3450">
-              <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+              <caret line="115" column="28" lean-forward="false" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
               <folding>
                 <marker date="1520320798253" expanded="true" signature="9668:9688" ph="..." />
                 <marker date="1520320798253" expanded="true" signature="9778:9786" ph="..." />
@@ -39,34 +40,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listIndex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
+      <file leaf-file-name="adduser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            <state relative-caret-position="136">
+              <caret line="134" column="29" lean-forward="true" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Public/menu.html">
+      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="253">
+              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DictionaryService.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
+      <file leaf-file-name="UsersModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/UsersModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="e#10#183#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convention.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/convention.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="135" column="11" lean-forward="false" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,7 +91,6 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Index/welcome.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/H-ui.admin/H-ui.admin/user-add.html" />
-        <option value="$PROJECT_DIR$/xyyb/Home/View/User/adduser.html" />
         <option value="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/de7bf3ee90af6b395cb64cd9a07d3509.php" />
         <option value="$PROJECT_DIR$/H-ui/lib/ztree/zTreeStyle.css" />
         <option value="$PROJECT_DIR$/xyyb/Runtime/Cache/Home/c93ab6aca25714b0b01a2a87f02a091a.php" />
@@ -114,8 +122,11 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/index.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Public/menu.html" />
-        <option value="$PROJECT_DIR$/xyyb/index.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
+        <option value="$PROJECT_DIR$/xyyb/index.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/User/edituser.html" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/User/adduser.html" />
+        <option value="$PROJECT_DIR$/xyyb/Home/Model/UsersModel.class.php" />
       </list>
     </option>
   </component>
@@ -158,6 +169,17 @@
             <path>
               <item name="campus" type="b2602c69:ProjectViewProjectNode" />
               <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ThinkPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ThinkPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Conf" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -165,6 +187,43 @@
               <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="campus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xyyb" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -308,12 +367,12 @@
       <workItem from="1520160086563" duration="833000" />
       <workItem from="1520212182902" duration="8201000" />
       <workItem from="1520296809208" duration="1447000" />
-      <workItem from="1520320438185" duration="359000" />
+      <workItem from="1520320438185" duration="2000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108672000" />
+    <option name="totallyTimeSpent" value="110313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -351,16 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/member-add.html" />
-    <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/picture-add.html" />
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="77" column="64" lean-forward="false" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Runtime/Cache/Home/de7bf3ee90af6b395cb64cd9a07d3509.php" />
     <entry file="file://$PROJECT_DIR$/H-ui/lib/ztree/zTreeStyle.css" />
     <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/product-category.html" />
     <entry file="file://$PROJECT_DIR$/H-ui.admin/H-ui.admin/product-category-add.html" />
@@ -405,13 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -552,6 +594,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -559,6 +602,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -566,13 +610,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -590,16 +628,6 @@
           <folding>
             <element signature="e#6#126#0#PHP" expanded="false" />
             <element signature="e#154#185#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#10#183#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -636,22 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Public/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/DictionaryModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -662,8 +674,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="450">
+          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Public/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -671,13 +699,71 @@
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3450">
-          <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+          <caret line="115" column="28" lean-forward="false" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
           <folding>
             <marker date="1520320798253" expanded="true" signature="9668:9688" ph="..." />
             <marker date="1520320798253" expanded="true" signature="9778:9786" ph="..." />
             <marker date="1520320798253" expanded="true" signature="10180:10200" ph="..." />
             <marker date="1520320798253" expanded="true" signature="10289:10297" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/edituser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/adduser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="134" column="29" lean-forward="true" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Controller/UserController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Service/DictionaryService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#10#183#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/Model/UsersModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/convention.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="135" column="11" lean-forward="false" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
