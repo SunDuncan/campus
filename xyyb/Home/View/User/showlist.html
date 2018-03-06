@@ -95,7 +95,7 @@ function sy(id){
         getConditionDictionary(data);
     })
     function getConditionDictionary(data) {
-        var base_url = ("{:U('User/showList')}").replace(/\.html/, '');
+        var base_url = ("{:U('User/showlist')}").replace(/\.html/, '');
         if (data.length != 0) {
             for(var key in data) {
                 base_url += "/" + key + "/" + data[key];
@@ -109,14 +109,14 @@ function sy(id){
         var b=$('#ty').val();
         if (a==''&&b==''){
 
-            location.href="{:U('User/showList')}";
+            location.href="{:U('User/showlist')}";
         }
     });
     $('#ty').change(function(){
         var a=$(this).val();
         var b=$('#tv').val();
         if (a==''&&b==''){
-            location.href="{:U('User/showList')}";
+            location.href="{:U('User/showlist')}";
         }
     });
 

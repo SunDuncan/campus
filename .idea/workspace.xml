@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b7f9-f730-469d-ac71-af069a1c3bf3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/Public/menu.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/Public/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" afterPath="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xyyb/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -25,12 +24,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showlist.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showlist.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="3450">
+              <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+              <folding>
+                <marker date="1520320798253" expanded="true" signature="9668:9688" ph="..." />
+                <marker date="1520320798253" expanded="true" signature="9778:9786" ph="..." />
+                <marker date="1520320798253" expanded="true" signature="10180:10200" ph="..." />
+                <marker date="1520320798253" expanded="true" signature="10289:10297" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +90,6 @@
         <option value="$PROJECT_DIR$/xyyb/Home/Controller/TaskController.class.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Task/showlist.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Message/showlist.html" />
-        <option value="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
         <option value="$PROJECT_DIR$/xyyb/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Public/footer.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Public/header.html" />
@@ -112,6 +115,7 @@
         <option value="$PROJECT_DIR$/xyyb/Home/View/Dictionary/listIndex.html" />
         <option value="$PROJECT_DIR$/xyyb/Home/View/Public/menu.html" />
         <option value="$PROJECT_DIR$/xyyb/index.php" />
+        <option value="$PROJECT_DIR$/xyyb/Home/View/User/showlist.html" />
       </list>
     </option>
   </component>
@@ -304,12 +308,12 @@
       <workItem from="1520160086563" duration="833000" />
       <workItem from="1520212182902" duration="8201000" />
       <workItem from="1520296809208" duration="1447000" />
-      <workItem from="1520320438185" duration="146000" />
+      <workItem from="1520320438185" duration="359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108459000" />
+    <option name="totallyTimeSpent" value="108672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -608,14 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xyyb/Home/View/Dictionary/showList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -669,6 +665,19 @@
         <state relative-caret-position="90">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xyyb/Home/View/User/showlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3450">
+          <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+          <folding>
+            <marker date="1520320798253" expanded="true" signature="9668:9688" ph="..." />
+            <marker date="1520320798253" expanded="true" signature="9778:9786" ph="..." />
+            <marker date="1520320798253" expanded="true" signature="10180:10200" ph="..." />
+            <marker date="1520320798253" expanded="true" signature="10289:10297" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
