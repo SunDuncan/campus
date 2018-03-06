@@ -31,7 +31,7 @@
             beforeClick: function(treeId, treeNode) {
                 var zTree = $.fn.zTree.getZTreeObj("tree");
                 if (treeNode.isParent) {
-                    var test = '{:U("adddictionary")}';
+                    var test = '{:U("addDictionary")}';
                     test = test.replace(/\.html/, '') + "/id/" + treeNode.id +  "/name/" + treeNode.name + "/level/" + treeNode.level;
                     demoIframe.attr("src",test);
                     console.log(test);
