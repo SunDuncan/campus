@@ -21,6 +21,8 @@ class UserService
     */
    public function checkUser($data)
    {
+
+
        $User=M('Users');
 
 
@@ -107,6 +109,42 @@ class UserService
          return false;
      }
   }
+
+  public function searchByType($data){
+
+
+      $da=array();
+    if(empty($data)) {
+        return false;
+    }
+
+
+      if ($data['type'] ==1) {
+          $da['username']=array("like","%".$data['value']."%");
+
+      }
+      if ($data['type'] ==2) {
+          $da['nickname']=array("like","%".$data['value']."%");
+
+      }
+      if ($data['type'] ==3) {
+          $da['phoneNumber']=array("like","%".$data['value']."%");
+
+      }
+      if ($data['type'] ==4) {
+          $da['email']=array("like","%".$data['value']."%");
+
+      }
+      $res=$this->userModel->where($da)->select();
+      if ($res) {
+          return $res;
+      }
+      else {
+          return false;
+      }
+
+  }
+
   /*
    * 删除用户
    */
@@ -200,9 +238,24 @@ public function firstDel($data,$res)
   }
 
   public function deleteMany($data){
-
-    return $this->userModel->where($data)->delete();
+     $res=$this->userModel->where($data)->select();
+     foreach ($res as $key){
+         unlink($key['avatar']);
+         $temp=explode('/',$key['avatar']);
+         $dir=$temp[0].'/'.$temp[1].'/'.$temp[2];
+         rmdir($dir);
+     }
+     return $this->userModel->where($data)->delete();
   }
+
+  //新建立函数
+    //获取分页的数据
+    public function getResult($data='')
+    {
+        $rn['count']=$this->userModel->countUsers($data);
+        $rn['data']=$this->userModel->getUsers($data);
+        return $rn;
+    }
 
 
 }

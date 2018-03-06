@@ -27,33 +27,33 @@ class UserController extends BackendController {
     }
 
     public function showList() {
-         $this->display();
+        $end_min_date = '#F{$dp.$D(' . '\\' . '\'logmin' . '\\' . '\'' . ')}';
+        $start_max_date = '#F{$dp.$D(' . '\\' . '\'logmax' . '\\' . '\')||' . '\\' . '\'%y-%M-%d' . '\\' . '\'}';
+        $data = I('get.') ? I("get.") : [];
+        $rn=$this->userService->getResult($data);
+        $this->assign('list', $rn['data']);
+        $this->assign('count', $rn['count']);
+        $this->assign('START_MAX_DATE', $start_max_date);
+        $this->assign('END_MIN_DATE', $end_min_date);
+        $this->display();
+
     }
 
     public function insertUser()
     {
 
-        //首先查看的token是否符合
-
-        /*
-
-        if (!$this->userService->checkToken($_POST)) {
-            $rn['flag']=false;
-            $rn['information']='重复提交了';
-            $this->ajaxReturn($rn);
-            //$this->error('重复提交了， ');
-        }
-      */
 
         //首先的话，肯定就是查看是否有相同的用户名;
         $data = I('post.');
 
-
-        $isHaveUser = $this->userService->checkUser($data);
-
-        if ($isHaveUser) {
-            //表示用户的昵称不重复
-            //接下来的话，就是准备验证上传的图片了
+        $user=D('Users');
+        if (! $user->create($_POST,1)){
+            $rn['flag']=false;
+            $rn['information']=$user->getError();
+            $this->ajaxReturn($rn);
+             //var_dump($user->getError());
+        }
+        else {
             $upload = new \Think\Upload();// 实例化上传类
             $upload->maxSize = 3145728;// 设置附件上传大小
             $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -69,43 +69,112 @@ class UserController extends BackendController {
                 $rn['flag']=false;
                 $rn['information']=$upload->getError();
                 $this->ajaxReturn($rn);
-
-                //$this->error($upload->getError());
             } else {// 上传成功
 
                 $img_url = './uploads/' . '' . $info['files']['savepath'] . $info['files']['savename'];
                 $createTime = date('Y-m-d H:i:s', NOW_TIME);
                 $key = $this->userService->produceKey();
-                $data['key'] = $key;
-                $data['gender'] = (int)$data['sex'];
-                $data['avatar'] = $img_url;
-                $data['birthday'] = $data['birthday'] . " 00:00:00";
-                unset($data['sex']);
-                $data['desc'] = $data['beizhu'];
-                $data['password'] = $this->userService->cryptPassword($data['password'], $key);
-                $data['createTime'] = $createTime;
-                if ($this->userService->addUser($data)) {
-                    $rn['flag']=true;
-                    $rn['information']='用户添加成功';
-                    $this->ajaxReturn($rn);
-                    //$this->success('添加用户成功');
-                } else {
-                    $rn['flag']=false;
-                    $rn['information']='用户添加失败';
-                    $this->ajaxReturn($rn);
-                    //$this->error('添加失败');
-                }
+                $user->key=$key;
+                $user->avatar=$img_url;
+                $user->createTime=$createTime;
+                $user->password=$this->userService->cryptPassword($user->password,$key);
+                $ds=$user->add();
+                $dc=array();
+               if ($ds) {
+                   $rn['flag']=true;
+                   $rn['information']="用户添加成功";
+                   $this->ajaxReturn($rn);
+               }
+               else {
+                   $rn['flag']=false;
+                   $rn['imformation']="用户添加失败";
+                   $this->ajaxReturn($rn);
+               }
+
 
             }
 
-        } else {
-             $rn['flag']=false;
-             $rn['information']='用户添加失败';
-             $this->ajaxReturn($rn);
-            // $this->error('用户名已经存在,请刷新页面后再次输入');
+
         }
+    }
+
+/*
+    public function searchByType(){
+
+
+
+            $res=I('post.aoData');
+            $bb=I('post.own');
+            $bb=(array)json_decode($bb);
+            if (empty($bb)) {
+                echo json_encode(false);
+            }
+            else {
+                $iDisplayStart = 0; // 起始索引
+                $iDisplayLength = 0;//分页长度
+                $iSortCol_0 = 0;// order by 哪一列
+                $sSortDir_0 = "asc";
+                $sSearch = '';
+                $sEcho='';
+                $jsonarray = json_decode($res);
+
+                foreach ($jsonarray as $value) {
+                    if ($value->name == "sEcho") {
+                        $sEcho = $value->value;
+                    }
+                    if ($value->name == "iDisplayStart") {
+                        $iDisplayStart = $value->value;
+                    }
+                    if ($value->name == "iDisplayLength") {
+                        $iDisplayLength = $value->value;
+                    }
+                    if ($value->name == "iSortCol_0") {
+                        $iSortCol_0 = $value->value;
+                    }
+
+                    if ($value->name == "sSortDir_0") {
+                        $sSortDir_0 = $value->value;
+                    }
+
+                    if ($value->name == "sSearch") {
+                        $sSearch = $value->value;
+                    }
+                }
+
+                $Array = array();
+                $res=$this->userService->searchByType($bb);
+                $count=count($res);
+                if ($res) {
+                    $count = count($res);
+                    foreach ($res as $key => $value) {
+                        $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})' >", $value["id"], $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'字典编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\'' . $value['id'] . '\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\'' . $value['id'] . '\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                                 ');
+                        Array_push($Array, $data);
+                    }
+                    $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => $count, 'iTotalDisplayRecords' => $count, 'aaData' => $Array);  //按照datatable的当前页和每页长度返回json数据
+                    $obj = json_encode($json_data);
+                    echo $obj;
+                }
+                else {
+                    $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => 0, 'iTotalDisplayRecords' => 0, 'aaData' => array());  //按照datatable的当前页和每页长度返回json数据
+                    $obj = json_encode($json_data);
+                    echo $obj;
+                }
+            }
+
+
+
+
+
 
     }
+
+
+
+
+
+
+
 
     public function fenyesearch()
     {
@@ -142,7 +211,7 @@ class UserController extends BackendController {
             }
         }
         $data = array();
-        $Array = Array();
+        $Array = array();
         if (!empty($sSearch)) {
             $da['username'] = $sSearch;
 
@@ -150,11 +219,15 @@ class UserController extends BackendController {
 
             if ($res) {
                 $count = count($res);
+                $num=1;
                 foreach ($res as $key => $value) {
-                    $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})' >", $value["id"], $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'字典编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\'' . $value['id'] . '\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\'' . $value['id'] . '\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                    $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})'>", $num, $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'字典编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\'' . $value['id'] . '\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\'' . $value['id'] . '\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                                  ');
                     Array_push($Array, $data);
+                            $num++;
+
                 }
+
                 $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => $count, 'iTotalDisplayRecords' => $count, 'aaData' => $Array);  //按照datatable的当前页和每页长度返回json数据
                 $obj = json_encode($json_data);
                 echo $obj;
@@ -166,14 +239,15 @@ class UserController extends BackendController {
 
         }
         else {
-
             $result = $this->userService->getInformation();
             $count = $result['count'];
             $res = $result['result'];
+            $num=1;
             foreach ($res as $key => $value) {
                 //这里有我不会写的,.号''这个
-                $data = array("<input name='ck' type='checkbox' value='{$value['id']}'onclick='sy({$value['id']})' >", $value["id"], $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'用户编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\''.$value['id'].'\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\''.$value['id'].'\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})'>", $num, $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'用户编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\''.$value['id'].'\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\''.$value['id'].'\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
           ');
+                $num++;
                 Array_push($Array, $data);
 
             }
@@ -184,6 +258,9 @@ class UserController extends BackendController {
         }
     }
 
+
+
+*/
     public function deleteUser()
     {
         $data['id']=I('post.id');
@@ -295,8 +372,8 @@ class UserController extends BackendController {
     public function deleteMany(){
 
        $da=I('post.inform');
-       $da=json_decode($da);
-       if (empty($data)) {
+       $da=(array)json_decode($da);
+       if (empty($da)) {
            echo json_encode(false);
        }
        else {
@@ -316,6 +393,8 @@ class UserController extends BackendController {
        }
 
     }
+
+
 
 
 
