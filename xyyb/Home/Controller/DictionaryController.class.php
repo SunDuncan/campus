@@ -16,7 +16,7 @@ class DictionaryController extends BackendController {
     public function __construct()
     {
         parent::__construct();
-        $this->Tk();
+        $this->checkTk();
         $this->dictionaryModel = new DictionaryModel();
         $this->dictionaryService = new DictionaryService();
     }
