@@ -122,11 +122,11 @@
                        required:true,
                    },
                    phoneNumber:{
-
+                       required:true,
                        isMobile:true,
                    },
                    email:{
-
+                       required:true,
                        email:true,
                    },
                    files:{
@@ -159,6 +159,7 @@
                    $(form).ajaxSubmit(
                           {
                               success:function(data){
+                                  console.log(data);
                                   if (data.flag) {
 
                                       layer.msg(data.information,{icon:1},function(){

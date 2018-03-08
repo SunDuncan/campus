@@ -63,8 +63,10 @@ class UserService
            return false;
        }
        else {
-           $pwd=md5($password);
-           return crypt($pwd,$key);
+           $pwd=hash_hmac("sha256",$password,$key);
+           return $pwd;
+           //$pwd=md5($password);
+           //return crypt($pwd,$key);
        }
 
    }
@@ -255,6 +257,52 @@ public function firstDel($data,$res)
         $rn['count']=$this->userModel->countUsers($data);
         $rn['data']=$this->userModel->getUsers($data);
         return $rn;
+    }
+
+    /*
+     * 检查登录
+     */
+    public function delLogin($data)
+    {
+        $rn=array();
+        $rn['flag']=false;
+        if (empty($data['username'])) {
+            $rn['type']=1;
+            $rn['information']="必输输入用户名";
+            return $rn;
+        }
+        else if(empty($data['password'])){
+            $rn['type']=3;
+            $rn['information']="必输输入密码";
+            return $rn;
+        }
+        else if (empty($data['checkCode'])){
+            $rn['type']=5;
+            $rn['information']="必输输入验证码";
+            return $rn;
+        }
+        //这里应该要验证验证码是否是正确的
+         $dj=array();
+        $dj['username']=$data['username'];
+        //这里就是开始处理数据的时候了
+        $res=$this->userModel->getInfo($dj);
+        if (!$res) {
+            $rn['information']="用户名不存在";
+            $rn['type']=1;
+            return $rn;
+        }
+         $pwd=$this->cryptPassword($data['password'],$res[0]['key']);
+         if ($pwd === $res[0]['password']) {
+             $rn['information']="登录成功";
+             $rn['flag']=true;
+             return $rn;
+         }
+         else {
+             $rn['information']="密码输入不正确";
+             $rn['type']=4;
+             return $rn;
+         }
+
     }
 
 

@@ -388,7 +388,7 @@ function getCheckBoxValue(){
             $.ajax({
                 type: 'POST',
                 url: '{:U(\'User/deleteUser\')}',
-                //dataType: 'json',
+                dataType: 'json',
                 data:{
                     "id":JSON.stringify(id),
                 },

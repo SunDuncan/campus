@@ -17,6 +17,7 @@ class UserController extends BackendController {
     {
         parent::__construct();
         $this->userService=new UserService();
+        $this->checkTk();
     }
     public function  addUser() {
        $this->display();
@@ -45,7 +46,6 @@ class UserController extends BackendController {
 
         //首先的话，肯定就是查看是否有相同的用户名;
         $data = I('post.');
-
         $user=D('Users');
         if (! $user->create($_POST,1)){
             $rn['flag']=false;
@@ -70,7 +70,6 @@ class UserController extends BackendController {
                 $rn['information']=$upload->getError();
                 $this->ajaxReturn($rn);
             } else {// 上传成功
-
                 $img_url = './uploads/' . '' . $info['files']['savepath'] . $info['files']['savename'];
                 $createTime = date('Y-m-d H:i:s', NOW_TIME);
                 $key = $this->userService->produceKey();
@@ -84,90 +83,17 @@ class UserController extends BackendController {
                    $rn['flag']=true;
                    $rn['information']="用户添加成功";
                    $this->ajaxReturn($rn);
-               }
-               else {
+               } else {
                    $rn['flag']=false;
                    $rn['imformation']="用户添加失败";
                    $this->ajaxReturn($rn);
                }
-
-
             }
-
-
         }
     }
 
 /*
-    public function searchByType(){
 
-
-
-            $res=I('post.aoData');
-            $bb=I('post.own');
-            $bb=(array)json_decode($bb);
-            if (empty($bb)) {
-                echo json_encode(false);
-            }
-            else {
-                $iDisplayStart = 0; // 起始索引
-                $iDisplayLength = 0;//分页长度
-                $iSortCol_0 = 0;// order by 哪一列
-                $sSortDir_0 = "asc";
-                $sSearch = '';
-                $sEcho='';
-                $jsonarray = json_decode($res);
-
-                foreach ($jsonarray as $value) {
-                    if ($value->name == "sEcho") {
-                        $sEcho = $value->value;
-                    }
-                    if ($value->name == "iDisplayStart") {
-                        $iDisplayStart = $value->value;
-                    }
-                    if ($value->name == "iDisplayLength") {
-                        $iDisplayLength = $value->value;
-                    }
-                    if ($value->name == "iSortCol_0") {
-                        $iSortCol_0 = $value->value;
-                    }
-
-                    if ($value->name == "sSortDir_0") {
-                        $sSortDir_0 = $value->value;
-                    }
-
-                    if ($value->name == "sSearch") {
-                        $sSearch = $value->value;
-                    }
-                }
-
-                $Array = array();
-                $res=$this->userService->searchByType($bb);
-                $count=count($res);
-                if ($res) {
-                    $count = count($res);
-                    foreach ($res as $key => $value) {
-                        $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})' >", $value["id"], $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'字典编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\'' . $value['id'] . '\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\'' . $value['id'] . '\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
-                                 ');
-                        Array_push($Array, $data);
-                    }
-                    $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => $count, 'iTotalDisplayRecords' => $count, 'aaData' => $Array);  //按照datatable的当前页和每页长度返回json数据
-                    $obj = json_encode($json_data);
-                    echo $obj;
-                }
-                else {
-                    $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => 0, 'iTotalDisplayRecords' => 0, 'aaData' => array());  //按照datatable的当前页和每页长度返回json数据
-                    $obj = json_encode($json_data);
-                    echo $obj;
-                }
-            }
-
-
-
-
-
-
-    }
 
 
 
@@ -264,13 +190,9 @@ class UserController extends BackendController {
     public function deleteUser()
     {
         $data['id']=I('post.id');
-
-
         $data['id']=(int)json_decode($data['id']);
-
         $res=$this->userService->deleteUser($data);
         if ($res) {
-
             echo json_encode('yes');
         }
         else {
@@ -414,5 +336,8 @@ class UserController extends BackendController {
              $this->display();
          }
 
-   }
+  }
+
+
+
 }

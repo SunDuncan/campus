@@ -14,11 +14,12 @@ class MessageController extends BackendController {
     {
         parent::__construct();
         $this->message_service = new MessageService();
+        $this->checkTk();
     }
 
     public function showList() {
         $data = $this->message_service->getMessages();
-        var_dump($data);
+        //var_dump($data);
         $this->assign("list_data", $data);
         $this->display();
     }
