@@ -56,7 +56,7 @@
         "bStateSave": true,//状态保存
         "aoColumnDefs": [
             //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-            {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+            {"orderable":false,"aTargets":[0,7]}// 制定列不参与排序
         ]
     });
 
@@ -101,7 +101,6 @@
                     'ids': ids
                 },
                 success: function (data) {
-                    console.log(data.data);
                     if (data.code === 200) {
                         layer.msg('已删除!', {icon: 1, time: 1000});
                         location.replace(location.href);
@@ -110,7 +109,6 @@
                     }
                 },
                 error: function (data) {
-                    console.log(data);
                     console.log(data.msg);
                 },
             });

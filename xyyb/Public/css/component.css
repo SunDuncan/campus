@@ -10,7 +10,7 @@
 }
 
 .demo-1 .large-header {
-    background-image: url("{$Think.const.IMG_URL}demo-1-bg.jpg");
+    background-image: url("../images/demo-1-bg.jpg");
 }
 .logo_box{
     width: 400px;

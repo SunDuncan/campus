@@ -18,8 +18,11 @@ class MessageController extends BackendController {
 
     public function showList() {
         $data = $this->message_service->getMessages();
-        var_dump($data);
         $this->assign("list_data", $data);
         $this->display();
+    }
+
+    public function delMessages() {
+        $ids = $_POST['ids'];
     }
 }

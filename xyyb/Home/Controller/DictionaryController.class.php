@@ -11,8 +11,8 @@ use Home\Model\DictionaryModel;
 use Home\Service\DictionaryService;
 class DictionaryController extends BackendController {
 
-    protected $dictionaryService;
-    protected $dictionaryModel;
+    protected $dictionaryService = null;
+    protected $dictionaryModel = null;
     public function __construct()
     {
         parent::__construct();
@@ -43,6 +43,7 @@ class DictionaryController extends BackendController {
         }
     }
     /**************************************************************/
+
     /**
      * 同步到实际的数据
      */
@@ -110,6 +111,9 @@ class DictionaryController extends BackendController {
     }
     /************************************************************/
 
+    /************************************************************/
+    //除去字典的查询部分的其他部分的操作
+    /************************************************************/
     public function editDictionary() {
         $id = I('get.id');
         $data = $this->dictionaryService->getDictionary($id);
