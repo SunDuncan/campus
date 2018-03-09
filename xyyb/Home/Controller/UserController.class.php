@@ -45,7 +45,6 @@ class UserController extends BackendController {
     public function insertUser()
     {
 
-
         //首先的话，肯定就是查看是否有相同的用户名;
         $data = I('post.');
         $user=D('Users');
