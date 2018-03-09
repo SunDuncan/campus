@@ -10,7 +10,10 @@
     </div>
 
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onClick="delete_all()"  class="btn btn-danger radius"><i class="Hui-iconfont" >&#xe6e2;</i> 批量删除</a>
-                                            </span>
+       <a href="javascript:;"  class="btn btn-primary radius" onclick="member_add('添加用户','{:U('User/adduser')}','','510')"><i class="Hui-iconfont" >&#xe600;</i>增加用户</a>
+    </span>
+
+
     </div>
     <div class="mt-20">
       <table class="table table-border table-bordered table-bg table-hover table-sort" id="example">
@@ -388,7 +391,7 @@ function getCheckBoxValue(){
             $.ajax({
                 type: 'POST',
                 url: '{:U(\'User/deleteUser\')}',
-                //dataType: 'json',
+                dataType: 'json',
                 data:{
                     "id":JSON.stringify(id),
                 },
@@ -432,7 +435,9 @@ function getCheckBoxValue(){
         layer_show(title,url,w,h);
     }
 
-
+    function member_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
 
 </script>
 </body>

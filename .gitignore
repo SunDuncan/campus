@@ -1,3 +1,7 @@
 */Runtime/
 */.idea/*
 */uploads/*
+.idea
+*.iml
+out
+gen

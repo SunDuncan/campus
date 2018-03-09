@@ -1,0 +1,139 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>
+     登录
+
+</title>
+</head>
+<body style="background-image: url({$Think.const.IMG_URL}adminlogin.jpeg);  background-size: 100%;">
+<div style="position:absolute;left:500px;top:300px;">
+<form action="{:U('Index/checkLogin')}" method="post" id="form-member-add">
+      <div>
+          <label style="color:#e7e7e7;">用户名&nbsp&nbsp&nbsp&nbsp</label>
+          <input type="text"id="username" name="username" style="border-radius:25px;margin:6px;height:24px;width:200px;BACKGROUND-COLOR: transparent;font-size:18px;"><input type="text" id="ub" style="border:none;BACKGROUND-COLOR: transparent;color:red;" >
+      </div>
+      <div>
+          <label  style="color:#e7e7e7;">密&nbsp&nbsp&nbsp码&nbsp&nbsp&nbsp&nbsp</label>
+          <input type="password" id="password" name="password"  style="border-radius:25px;margin:6px;height:24px;width:200px;BACKGROUND-COLOR: transparent;font-size:25px;"><input id="pb" type="text" style="border:none;BACKGROUND-COLOR: transparent;color:red;">
+      </div>
+      <div>
+          <label  style="color:#e7e7e7;">验证码&nbsp&nbsp&nbsp&nbsp</label>
+          <input type="text" id="checkCode" name="checkCode" style="border-radius:25px;margin:6px;height:24px;width:200px;BACKGROUND-COLOR: transparent;font-size:18px;"><input id="cb"type="text" style="border:none;BACKGROUND-COLOR: transparent;color:red;">
+      </div>
+    <div >
+        <img src="{:U('Index/produceCode',array())}" onclick="this.src='{:U(\'Index/produceCode\',array())}'" />
+    </div>
+      <div>
+          <button type="button"  style="border-radius:25px;BACKGROUND-COLOR: transparent;background-color:#008CBA;margin:6px;width:220px;height:34px;position:relative;left:24px; " id ="sub">提交</button>
+      </div>
+  </form>
+</div>
+    <script type="text/javascript" src="{$Think.const.HUI_ADMIN_LIB}jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+           $('#username').focus(function(){
+                 if ($('#ub').val()== ''){
+                     return ;
+                 }
+                 else {
+                     $('#ub').val('');
+                 }
+           });
+           $('#password').focus(function(){
+               if ($('#pb').val()== ''){
+                   return ;
+               }
+               else {
+                   $('#pb').val('');
+               }
+           });
+           $('#checkCode').focus(function(){
+               if ($('#cb').val()== ''){
+                   return ;
+               }
+               else {
+                   $('#cb').val('');
+               }
+           });
+
+            $('#sub').click(function(){
+                var ob={};
+                ob.username=$('#username').val();
+                ob.password=$('#password').val();
+                ob.checkCode=$('#checkCode').val();
+                var fla=true;
+                if (ob.username == ''){
+                    $('#ub').val('请输入用户名');
+                    fla=false;
+                }
+                if (ob.password == ''){
+                    $('#pb').val('请输入密码');
+                    fla =false;
+                }
+                if (ob.checkCode == ''){
+                    $('#cb').val('请输入验证码');
+                    fla=false;
+                }
+                if (!fla) {
+                    return ;
+                }
+                $.ajax(
+                    {
+                        url:"{:U('Index/checkLogin')}",
+                        type:'post',
+                        data:{"ob":JSON.stringify(ob)},
+                        dataType:'json',
+                        success:function(data){
+                            if(data.flag){
+                                window.location=data.location;
+                            }
+                            else {
+                                putInfo(data);
+                                $('img').attr('src','{:U(\'Index/produceCode\',array())}');
+                                //alert(data.information);
+                            }
+                        },
+                        error:function(e){
+                            console.log(e);
+                        }
+                    }
+                );
+            });
+
+         function putInfo(data){
+             switch(data.type){
+                 case 1:
+                 $('#ub').val(data.information);
+                 break;
+                 case 2:
+                     $('#ub').val(data.information);
+                     break;
+                 case 3:
+                     $('#pb').val(data.information);
+                     break;
+                 case 4:
+                     $('#pb').val(data.information);
+                     break;
+                 case 5:
+                     $('#cb').val(data.information);
+                     break;
+                 case 6:
+                     $('#cb').val(data.information);
+                     break;
+                 default:
+                     console.log('出错了');
+
+             }
+
+         }
+
+
+
+    </script>
+</body>
+</html>
+
+
+
