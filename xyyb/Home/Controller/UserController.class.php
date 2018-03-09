@@ -9,6 +9,8 @@
 namespace Home\Controller;
 use Home\Model\UsersModel;
 use Home\Service\UserService;
+use \Think\Upload;
+
 class UserController extends BackendController {
 
     protected  $userService=null;
@@ -51,14 +53,12 @@ class UserController extends BackendController {
             $rn['flag']=false;
             $rn['information']=$user->getError();
             $this->ajaxReturn($rn);
-             //var_dump($user->getError());
         }
         else {
-            $upload = new \Think\Upload();// 实例化上传类
+            $upload = new Upload();// 实例化上传类
             $upload->maxSize = 3145728;// 设置附件上传大小
             $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
             $upload->rootPath = './uploads/'; // 设置附件上传根目录
-
             $upload->subName = array('date','YmdHis');
             $upload->savePath = '';
             $upload->saveName =array('uniqid','');
@@ -91,102 +91,6 @@ class UserController extends BackendController {
             }
         }
     }
-
-/*
-
-
-
-
-
-
-
-
-
-    public function fenyesearch()
-    {
-
-
-        $res = $_POST['aoData'];
-        $iDisplayStart = 0; // 起始索引
-        $iDisplayLength = 0;//分页长度
-        $iSortCol_0 = 0;// order by 哪一列
-        $sSortDir_0 = "asc";
-        $sSearch = ''; // 搜索的内容，可结合mysql中的like关键字实现搜索功能
-
-        $jsonarray = json_decode($res);
-        foreach ($jsonarray as $value) {
-            if ($value->name == "sEcho") {
-                $sEcho = $value->value;
-            }
-            if ($value->name == "iDisplayStart") {
-                $iDisplayStart = $value->value;
-            }
-            if ($value->name == "iDisplayLength") {
-                $iDisplayLength = $value->value;
-            }
-            if ($value->name == "iSortCol_0") {
-                $iSortCol_0 = $value->value;
-            }
-
-            if ($value->name == "sSortDir_0") {
-                $sSortDir_0 = $value->value;
-            }
-
-            if ($value->name == "sSearch") {
-                $sSearch = $value->value;
-            }
-        }
-        $data = array();
-        $Array = array();
-        if (!empty($sSearch)) {
-            $da['username'] = $sSearch;
-
-            $res = $this->userService->searchUser($da);
-
-            if ($res) {
-                $count = count($res);
-                $num=1;
-                foreach ($res as $key => $value) {
-                    $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})'>", $num, $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'字典编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\'' . $value['id'] . '\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\'' . $value['id'] . '\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
-                                 ');
-                    Array_push($Array, $data);
-                            $num++;
-
-                }
-
-                $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => $count, 'iTotalDisplayRecords' => $count, 'aaData' => $Array);  //按照datatable的当前页和每页长度返回json数据
-                $obj = json_encode($json_data);
-                echo $obj;
-            } else {
-                $json_data = array('sEcho' => $sEcho, 'iTotalRecords' => 0, 'iTotalDisplayRecords' => 0, 'aaData' => array());  //按照datatable的当前页和每页长度返回json数据
-                $obj = json_encode($json_data);
-                echo $obj;
-            }
-
-        }
-        else {
-            $result = $this->userService->getInformation();
-            $count = $result['count'];
-            $res = $result['result'];
-            $num=1;
-            foreach ($res as $key => $value) {
-                //这里有我不会写的,.号''这个
-                $data = array("<input name='ck' type='checkbox' value='{$value['id']}' onclick='sy({$value['id']})'>", $num, $value['username'], $value['nickname'], $value['phonenumber'], $value['email'], $value['createtime'], '<span class="label label-success radius">已发布</span>', '<a style="text-decoration:none" onClick="picture_stop(this,\'10001\')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="user_edit(\'用户编辑\',\'http://localhost/campus/xyyb/index.php/Home/User/editUser\',\''.$value['id'].'\')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,\''.$value['id'].'\')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
-          ');
-                $num++;
-                Array_push($Array, $data);
-
-            }
-
-            $json_data = array('sEcho' => $sEcho, 'sSearch' => $sSearch, 'iTotalRecords' => $count, 'iTotalDisplayRecords' => $count, 'aaData' => array_slice($Array, $iDisplayStart, $iDisplayLength));  //按照datatable的当前页和每页长度返回json数据
-            $obj = json_encode($json_data);
-            echo $obj;
-        }
-    }
-
-
-
-*/
     public function deleteUser()
     {
         $data['id']=I('post.id');

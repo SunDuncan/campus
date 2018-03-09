@@ -8,6 +8,9 @@
 
 namespace Home\Controller;
 use \Firebase\JWT\JWT;
+use \Firebase\JWT\ExpiredException;
+use \Firebase\JWT\BeforeValidException;
+use \Firebase\JWT\SignatureInvalidException;
 use Think\Controller;
 use Think\Exception;
 
@@ -83,9 +86,23 @@ class BackendController extends Controller
                     $this->redirect('Home/Index/login');
                 }
             }
-            catch(Exception $e){
+            catch(BeforeValidException $e){
+                unset($_SESSION['token']);
                 $this->redirect('Home/Index/login');
             }
+            catch(ExpiredException $e){
+                unset($_SESSION['token']);
+                $this->redirect('Home/Index/login');
+            }
+            catch(SignatureInvalidException $e){
+                unset($_SESSION['token']);
+                $this->redirect('Home/Index/login');
+            }
+            catch(\UnexpectedValueException $e){
+                unset($_SESSION['token']);
+                $this->redirect('Home/Index/login');
+            }
+
 
         }
 

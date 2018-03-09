@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use \Home\Service\UserService;
+use \Think\Verify;
 class IndexController extends BackendController {
     protected $token=null;
     protected $veriy=null;
@@ -13,7 +14,7 @@ class IndexController extends BackendController {
             'bg'  => array(255,240,230),
 
         );
-        $this->veriy=new \Think\Verify($config);
+        $this->veriy=new Verify($config);
     }
 
     public function index(){
